@@ -9,10 +9,9 @@ collections:
   - name: "section"
     label: "Sections"
     folder: "src/pages/section"
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
