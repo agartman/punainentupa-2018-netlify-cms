@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Atte Gartman - Freelancer full stack developer - Punainen tupa solutions Oy',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
