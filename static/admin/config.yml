@@ -6,6 +6,19 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "feature"
+    label: "Features"
+    folder: "content/features"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Content Type", name: "contentType", widget: "hidden", default: "feature"}
+      - {label: "Feature Order", name: "featureType", widget: "select", options: "featureOne", "featureTwo", "featureThree"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Step Text", name: "step", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+
   - name: "section"
     label: "Sections"
     folder: "src/pages/section"
