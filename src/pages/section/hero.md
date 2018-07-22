@@ -1,5 +1,6 @@
 ---
 title: Hero
+orderNumber: 1
 sectionType: hero
 theme: white
 alignment: center
