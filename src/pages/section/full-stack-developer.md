@@ -1,6 +1,6 @@
 ---
 title: Full stack developer
-orderNumber: 200
+orderNumber: 2
 sectionType: simple
 theme: lightgray
 alignment: center
