@@ -9,12 +9,21 @@ export default class IndexPage extends React.Component {
 
     return (
       <div className="container">
-        {sections.map(({ node: section }) => (
-          <HTMLContent
-            className={`angled bg-red ${section.frontmatter.theme}`}
-            content={section.html}
-          />
-        ))}
+        {sections
+          .sort((a, b) => {
+            return (
+              a.node.frontmatter.orderNumber - b.node.frontmatter.orderNumber
+            );
+          })
+          .map(({ node: section }) => (
+            <HTMLContent
+              key={section.orderNumber}
+              className={`${section.frontmatter.sectionType} angled bg-${
+                section.frontmatter.theme
+              } text${section.frontmatter.alignment}`}
+              content={section.html}
+            />
+          ))}
       </div>
     );
   }
@@ -40,7 +49,10 @@ export const pageQuery = graphql`
           }
           frontmatter {
             theme
+            orderNumber
             templateKey
+            sectionType
+            alignment
           }
         }
       }
