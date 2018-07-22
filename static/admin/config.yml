@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "OrderNumber", name: "orderNumber", widget: "number", default: 1, valueType: "int", min: 1, max: 101}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Type", name: "sectionType", widget: "select", options: ["hero", "simple", "footer", "contact", "highlight"]}
       - {label: "Theme", name: "theme", widget: "select", options: ["white", "lightgray", "red", "darkgray"]}

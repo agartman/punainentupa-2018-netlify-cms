@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
+import { HTMLContent } from "../components/Content";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,13 +10,10 @@ export default class IndexPage extends React.Component {
     return (
       <div className="container">
         {sections.map(({ node: section }) => (
-          <div className="content" key={section.id}>
-            <p>
-              <Link className="has-text-primary" to={section.fields.slug}>
-                {section.frontmatter.theme}
-              </Link>
-            </p>
-          </div>
+          <HTMLContent
+            className={`angled bg-red ${section.frontmatter.theme}`}
+            content={section.html}
+          />
         ))}
       </div>
     );

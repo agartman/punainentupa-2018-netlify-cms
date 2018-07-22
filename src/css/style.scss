@@ -1,0 +1,66 @@
+body {
+  background-color: white;
+  margin: 0px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.bg {
+  &-lightgray {
+    background-color: #fafafa;
+    color: #707070;
+    text-transform: uppercase;
+  }
+  &-red {
+    text-transform: uppercase;
+
+    background-color: #ce2d2d;
+    color: #ffffff;
+  }
+}
+.textright {
+  text-align: right;
+}
+
+.textcenter {
+  text-align: center;
+}
+.angled {
+  position: relative;
+  z-index: 1;
+  margin: 50px 0;
+  padding: 20% 15vmin;
+  &::before,
+  &::after {
+    background: inherit;
+    content: "";
+    display: block;
+    padding-top: 30vmin;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    transform-origin: 100% 0;
+  }
+  &::after {
+    top: 0;
+    transform: skewY(4deg);
+  }
+  &::before {
+    bottom: 0;
+    transform: skewY(-4deg);
+  }
+}
+
+.regular {
+  color: black;
+  padding: 15vmin;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+.hero {
+  font-size: 16pt;
+  text-align: center;
+}
