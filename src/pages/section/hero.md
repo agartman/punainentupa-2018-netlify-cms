@@ -9,4 +9,4 @@ alignment: center
 
 # Moi, mun nimi on Atte!
 
-# Joko aloitetaan?
+# Freelancer full stack web -kehittäjä
