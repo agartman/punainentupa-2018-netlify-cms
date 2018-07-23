@@ -7,6 +7,6 @@ alignment: right
 ---
 # UX development
 
-* React, Vue, Redux
+* 15 years hands-on web dev
 * ES6, TypeScript, SCSS
-* 12 years of experience
+* React, Vue, Redux
