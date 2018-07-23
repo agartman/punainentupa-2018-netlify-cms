@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { HTMLContent } from "../components/Content";
+import ContactForm from "../components/ContactForm";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -15,15 +16,24 @@ export default class IndexPage extends React.Component {
               a.node.frontmatter.orderNumber - b.node.frontmatter.orderNumber
             );
           })
-          .map(({ node: section }) => (
-            <HTMLContent
-              key={section.orderNumber}
-              className={`section ${section.frontmatter.class} ${section.frontmatter.sectionType} angled bg-${
-                section.frontmatter.theme
-              } text${section.frontmatter.alignment}`}
-              content={section.html}
-            />
-          ))}
+          .map(
+            ({
+              node: {
+                html,
+                orderNumber,
+                frontmatter: { sectionType, theme, class: className, alignment }
+              }
+            }) => (
+              sectionType != 'contact' ? 
+              <HTMLContent
+                key={orderNumber}
+                className={`section ${sectionType} angled bg-${theme} text${alignment} ${
+                  className ? className : ""
+                }`}
+                content={html}
+              /> : <ContactForm />
+            )
+          )}
       </div>
     );
   }
@@ -53,6 +63,7 @@ export const pageQuery = graphql`
             templateKey
             sectionType
             alignment
+            class
           }
         }
       }
