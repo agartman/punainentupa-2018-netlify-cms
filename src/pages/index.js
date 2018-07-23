@@ -18,7 +18,7 @@ export default class IndexPage extends React.Component {
           .map(({ node: section }) => (
             <HTMLContent
               key={section.orderNumber}
-              className={`section ${section.frontmatter.sectionType} angled bg-${
+              className={`section ${section.frontmatter.class} ${section.frontmatter.sectionType} angled bg-${
                 section.frontmatter.theme
               } text${section.frontmatter.alignment}`}
               content={section.html}
