@@ -16,6 +16,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "OrderNumber", name: "orderNumber", widget: "number", default: 1, valueType: "int", min: 1, max: 101}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "CSS Class", name: "class", widget: "string"}
       - {label: "Type", name: "sectionType", widget: "select", options: ["hero", "simple", "footer", "contact", "highlight"]}
       - {label: "Theme", name: "theme", widget: "select", options: ["white", "lightgray", "red", "darkgray"]}
       - {label: "Alignment", name: "alignment", widget: "select", options: ["center", "left", "right"]}

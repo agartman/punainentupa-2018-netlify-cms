@@ -13,10 +13,28 @@ body {
   ul {
     padding: 0px;
   }
+  a {
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 2px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    &:hover {
+      background-color: #fafafa;
+      color: #7c7c7c;
+    }
+    &:active {
+      position: relative;
+    }
+  }
 
-img {
-  max-width: 100px;
-}
+  img {
+    max-width: 40%;
+  }
 }
 .bg {
   &-lightgray {
@@ -43,7 +61,7 @@ img {
   position: relative;
   z-index: 1;
   margin: 50px 0;
-  padding: 20% 15vmin;
+  padding: 16% 15vmin;
   h3 {
     line-height: 2;
   }

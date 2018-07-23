@@ -1,7 +1,7 @@
 ---
 templateKey: index
 title: Testimonials
-orderNumber: 2
+orderNumber: 6
 sectionType: simple
 theme: white
 alignment: left
