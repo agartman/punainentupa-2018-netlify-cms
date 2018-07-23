@@ -2,7 +2,7 @@
 title: Footer
 orderNumber: 9
 sectionType: contact
-theme: lightgray
+theme: red
 alignment: center
 ---
 ## Let's talk!

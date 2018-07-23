@@ -3,7 +3,7 @@ title: Teams and culture
 orderNumber: 5
 sectionType: highlight
 theme: white
-alignment: left
+alignment: right
 ---
 # Teams and culture
 

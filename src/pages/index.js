@@ -23,16 +23,22 @@ export default class IndexPage extends React.Component {
                 orderNumber,
                 frontmatter: { sectionType, theme, class: className, alignment }
               }
-            }) => (
-              sectionType != 'contact' ? 
-              <HTMLContent
-                key={orderNumber}
-                className={`section ${sectionType} angled bg-${theme} text${alignment} ${
-                  className ? className : ""
-                }`}
-                content={html}
-              /> : <ContactForm />
-            )
+            }) =>
+              sectionType !== "contact" ? (
+                <HTMLContent
+                  key={orderNumber}
+                  className={`section ${sectionType} angled bg-${theme} text${alignment} ${
+                    className ? className : ""
+                  }`}
+                  content={html}
+                />
+              ) : (
+                <ContactForm
+                  classNames={`section ${sectionType} angled bg-${theme} text${alignment} ${
+                    className ? className : ""
+                  }`}
+                />
+              )
           )}
       </div>
     );
