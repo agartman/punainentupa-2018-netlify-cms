@@ -6,4 +6,4 @@ sectionType: highlight
 theme: darkgray
 alignment: center
 ---
-![](/img/special_proghtml5_wht.png)
+![null](/img/special_proghtml5_wht.png)
