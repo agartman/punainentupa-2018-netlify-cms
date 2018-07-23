@@ -5,4 +5,5 @@ sectionType: simple
 theme: lightgray
 alignment: center
 ---
-# Freelancer full stack developer in Helsinki area
+# How can I help? 
+### Available for hour based work or web site projects with fixed price. Anything from a small website, to a global e-commerce site. 

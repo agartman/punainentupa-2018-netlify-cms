@@ -3,15 +3,24 @@ body {
   margin: 0px;
   font-family: "Josefin Sans", sans-serif;
 }
+.section {
+  h1, h2, h3, ul {
+    text-transform: uppercase;
+  }
+  ul {
+    padding: 0px;
+  }
+}
 .bg {
   &-lightgray {
     background-color: #fafafa;
     color: #707070;
-    text-transform: uppercase;
+  }
+  &-darkgray {
+    background-color: #7C7C7C;
+    color: #F5F5F5;
   }
   &-red {
-    text-transform: uppercase;
-
     background-color: #ce2d2d;
     color: #ffffff;
   }
@@ -28,6 +37,9 @@ body {
   z-index: 1;
   margin: 50px 0;
   padding: 20% 15vmin;
+  h3 {
+    line-height: 2;
+  }
   ul {
     list-style-type: none;
     line-height: 2;
