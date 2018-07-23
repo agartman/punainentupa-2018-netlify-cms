@@ -5,5 +5,8 @@ sectionType: hero
 theme: white
 alignment: center
 ---
+![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
+
 # Moi, mun nimi on Atte!
+
 # Joko aloitetaan?
