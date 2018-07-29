@@ -1,7 +1,22 @@
+@import "mixins";
+@import "variables";
+
 body {
   background-color: white;
   margin: 0px;
   font-family: "Josefin Sans", sans-serif;
+}
+
+.bg {
+  &-lightgray {
+    @include sectioncolors($lightgray, $lightgraytext)
+  }
+  &-darkgray {
+    @include sectioncolors($darkgray, $darkgraytext)
+  }
+  &-red {
+    @include sectioncolors($red, #ffffff)
+  }
 }
 .section {
   h1,
@@ -9,44 +24,10 @@ body {
   h3,
   ul {
     text-transform: uppercase;
+    line-height: 2;
   }
   ul {
     padding: 0px;
-  }
-  a {
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 2px solid white;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    text-decoration: none;
-    &:hover {
-      background-color: #fafafa;
-      color: #7c7c7c;
-    }
-    &:active {
-      position: relative;
-    }
-  }
-
-  img {
-    max-width: 40%;
-  }
-}
-.bg {
-  &-lightgray {
-    background-color: #fafafa;
-    color: #707070;
-  }
-  &-darkgray {
-    background-color: #7c7c7c;
-    color: #f5f5f5;
-  }
-  &-red {
-    background-color: #ce2d2d;
-    color: #ffffff;
   }
 }
 .textright {
@@ -60,16 +41,10 @@ body {
   position: relative;
   z-index: 1;
   margin: 50px 0;
-  padding: 30% 15vmin;
-  @media (min-width: 1024px) {
-    padding: 10% 15vmin;
-  }
-  h3 {
-    line-height: 2;
-  }
+  @include sectionpadding();
+
   ul {
     list-style-type: none;
-    line-height: 2;
   }
   &::before,
   &::after {
@@ -115,12 +90,29 @@ p {
   img {
     max-width: 80%;
   }
+  a {
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 2px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      background-color: #fafafa;
+      color: #7c7c7c;
+    }
+    &:active {
+      position: relative;
+    }
+  }
 }
 .blog {
   &-hero {
     font-size: 26pt;
     line-height: 42pt;
-    padding: 25% 15vmin;
+    @include sectionpadding();
   }
   &-description {
     font-size: 22pt;

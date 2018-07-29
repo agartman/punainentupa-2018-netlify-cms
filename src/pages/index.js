@@ -1,50 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
 import ContactForm from "../components/ContactForm";
 const getSectionBySectionType = (
   {
     node: {
       html,
-      orderNumber,
-      frontmatter: { sectionType, theme, class: className, alignment }
+      frontmatter: { title, sectionType, theme, class: className, alignment }
     }
   },
   edges
 ) => {
-  console.log(edges);
+  const commonProps = {
+    key: title,
+    className: `section ${sectionType} angled bg-${theme} text${alignment} ${
+      className ? className : ""
+    }`
+  };
   switch (sectionType) {
     case "contact":
-      return (
-        <ContactForm
-          classNames={`section ${sectionType} angled bg-${theme} text${alignment} ${
-            className ? className : ""
-          }`}
-        />
-      );
+      return <ContactForm  {...commonProps} />;
     case "blog":
       const blogPosts = edges.filter(
         edge => edge.node.frontmatter.templateKey === "blog-post"
       );
       return (
-        <HTMLContent
-          key={orderNumber}
-          className={`section ${sectionType} angled bg-${theme} text${alignment} ${
-            className ? className : ""
-          }`}
-          content={html}
-        />
+        <div {...commonProps}>
+          <HTMLContent content={html} />
+          <ul>
+            {blogPosts.map(
+              ({ node: { id, fields: { slug }, frontmatter: { title } } }) => {
+                return (
+                  <li key={id}>
+                    <Link to={slug}>{title}</Link>
+                  </li>
+                );
+              }
+            )}
+          </ul>
+        </div>
       );
     default:
-      return (
-        <HTMLContent
-          key={orderNumber}
-          className={`section ${sectionType} angled bg-${theme} text${alignment} ${
-            className ? className : ""
-          }`}
-          content={html}
-        />
-      );
+      return <HTMLContent {...commonProps} content={html} />;
   }
 };
 export default class IndexPage extends React.Component {
@@ -77,7 +75,7 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(filter: { frontmatter: { theme: { ne: null } } }) {
+    allMarkdownRemark {
       edges {
         node {
           id
@@ -86,6 +84,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            title
             theme
             orderNumber
             templateKey

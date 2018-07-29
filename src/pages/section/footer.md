@@ -1,7 +1,7 @@
 ---
 templateKey: index
 title: Footer
-orderNumber: 10
+orderNumber: 11
 sectionType: footer
 theme: white
 alignment: center

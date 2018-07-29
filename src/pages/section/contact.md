@@ -1,6 +1,6 @@
 ---
 templateKey: index
-title: Footer
+title: Contact
 orderNumber: 9
 sectionType: contact
 theme: red

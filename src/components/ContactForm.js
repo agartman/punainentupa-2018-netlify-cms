@@ -76,7 +76,7 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className={this.props.classNames}>
+      <div className={this.props.className}>
         <h2>Let's talk!</h2>
         <h4>Call me on +358 50 371 3477</h4>
 

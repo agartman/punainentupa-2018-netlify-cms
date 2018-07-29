@@ -1,6 +1,6 @@
 ---
 templateKey: index
-title: Footer
+title: Tools
 orderNumber: 5
 sectionType: highlight
 theme: lightgray

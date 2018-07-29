@@ -1,9 +1,9 @@
 ---
 templateKey: index
 title: Blog
-orderNumber: 8
+orderNumber: 2
 class: blog
-sectionType: highlight
+sectionType: blog
 theme: darkgray
 alignment: left
 ---
