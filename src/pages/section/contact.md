@@ -1,4 +1,5 @@
 ---
+templateKey: index
 title: Footer
 orderNumber: 9
 sectionType: contact

@@ -1,4 +1,5 @@
 ---
+templateKey: index
 title: Hero
 orderNumber: 1
 sectionType: hero

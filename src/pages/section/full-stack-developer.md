@@ -1,4 +1,5 @@
 ---
+templateKey: index
 title: Full stack developer
 orderNumber: 2
 class: fullstack

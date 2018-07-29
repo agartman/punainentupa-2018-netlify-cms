@@ -1,4 +1,5 @@
 ---
+templateKey: index
 title: Teams and culture
 orderNumber: 5
 sectionType: highlight

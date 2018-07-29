@@ -1,4 +1,5 @@
 ---
+templateKey: index
 title: Footer
 orderNumber: 5
 sectionType: highlight
