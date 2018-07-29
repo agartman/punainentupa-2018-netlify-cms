@@ -21,7 +21,6 @@ body {
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    padding: 10px 30px;
     text-decoration: none;
     &:hover {
       background-color: #fafafa;
@@ -62,6 +61,9 @@ body {
   z-index: 1;
   margin: 50px 0;
   padding: 30% 15vmin;
+  @media (min-width: 1024px) {
+    padding: 10% 15vmin;
+  }
   h3 {
     line-height: 2;
   }
@@ -112,6 +114,28 @@ p {
 .certifications {
   img {
     max-width: 80%;
-
+  }
+}
+.blog {
+  &-hero {
+    font-size: 26pt;
+    line-height: 42pt;
+    padding: 25% 15vmin;
+  }
+  &-description {
+    font-size: 22pt;
+    line-height: 36pt;
+  }
+  &-post {
+    padding: 10% 15vmin;
+    p {
+      font-family: "Cardo";
+    }
+  }
+}
+.fullstack {
+  img {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 }

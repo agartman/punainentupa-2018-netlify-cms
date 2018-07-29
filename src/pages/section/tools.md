@@ -3,7 +3,9 @@ title: Footer
 orderNumber: 5
 sectionType: highlight
 theme: lightgray
-alignment: left
+alignment: right
 ---
 
-# Tools I like
+# Tools and frameworks I like
+
+* Ramda, Gatsby
