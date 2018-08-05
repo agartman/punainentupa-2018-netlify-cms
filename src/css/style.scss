@@ -9,13 +9,13 @@ body {
 
 .bg {
   &-lightgray {
-    @include sectioncolors($lightgray, $lightgraytext)
+    @include sectioncolors($lightgray, $lightgraytext);
   }
   &-darkgray {
-    @include sectioncolors($darkgray, $darkgraytext)
+    @include sectioncolors($darkgray, $darkgraytext);
   }
   &-red {
-    @include sectioncolors($red, #ffffff)
+    @include sectioncolors($red, #ffffff);
   }
 }
 .section {
@@ -24,7 +24,10 @@ body {
   h3,
   ul {
     text-transform: uppercase;
-    line-height: 2;
+    line-height: 1.8;
+    li {
+      padding-bottom: 15px;
+    }
   }
   ul {
     padding: 0px;
@@ -79,11 +82,18 @@ p {
   margin-top: 0.5em;
 }
 .hero {
+  margin-top: 0px;
   text-transform: uppercase;
-  font-size: 16pt;
+  font-size: 13pt;
+  h1 {
+    line-height: 46pt;
+  }
+}
+.hero,
+.footer {
   text-align: center;
   img {
-    max-width: 50%;
+    max-width: 50vmin;
   }
 }
 .certifications {
@@ -94,10 +104,9 @@ p {
     -moz-border-radius: 28px;
     -webkit-border-radius: 28px;
     border-radius: 28px;
-    border: 2px solid white;
+    border: 2px solid;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     text-decoration: none;
     &:hover {
       background-color: #fafafa;
@@ -117,9 +126,10 @@ p {
   &-description {
     font-size: 22pt;
     line-height: 36pt;
+    padding: 10% 10vmin;
   }
   &-post {
-    padding: 10% 15vmin;
+    padding: 10% 10vmin;
     p {
       font-family: "Cardo";
     }
@@ -129,5 +139,17 @@ p {
   img {
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 50vmin;
+  }
+}
+.contact {
+  form {
+    div {
+      padding-bottom: 30px;
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

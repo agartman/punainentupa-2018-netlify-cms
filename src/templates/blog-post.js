@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
         content={title}
       />
       <Content
-        className={`section regular bg-white textright blog-description`}
+        className={`section regular bg-white blog-description`}
         content={description}
       />
       <HTMLContent

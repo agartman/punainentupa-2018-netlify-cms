@@ -84,7 +84,6 @@ export default class ContactForm extends React.Component {
 
         <form
           onSubmit={this.handleSubmit}
-          className="pure-form pure-form-stacked float-center"
         >
           <div>
             <div>

@@ -3,8 +3,8 @@ templateKey: index
 title: Testimonials
 orderNumber: 7
 sectionType: simple
-theme: white
-alignment: left
+theme: lightgray
+alignment: right
 ---
 # Testimonials
 

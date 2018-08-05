@@ -1,9 +1,9 @@
 ---
 templateKey: index
 title: Certifications
-orderNumber: 6
+orderNumber: 8
 sectionType: highlight
-theme: darkgray
+theme: white
 alignment: center
 class: certifications
 ---

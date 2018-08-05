@@ -1,10 +1,10 @@
 ---
 templateKey: index
 title: Blog
-orderNumber: 2
+orderNumber: 3
 class: blog
 sectionType: blog
-theme: darkgray
+theme: white
 alignment: left
 ---
 # Blog

@@ -4,7 +4,7 @@ title: Hero
 orderNumber: 1
 sectionType: hero
 theme: white
-alignment: center
+alignment: left
 ---
 ![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
 

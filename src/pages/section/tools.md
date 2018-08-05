@@ -1,10 +1,10 @@
 ---
 templateKey: index
 title: Tools
-orderNumber: 5
+orderNumber: 6
 sectionType: highlight
-theme: lightgray
-alignment: right
+theme: white
+alignment: left
 ---
 
 # Tools and frameworks I like

@@ -3,8 +3,8 @@ templateKey: index
 title: Teams and culture
 orderNumber: 5
 sectionType: highlight
-theme: white
-alignment: left
+theme: darkgray
+alignment: right
 ---
 # Teams and culture
 
