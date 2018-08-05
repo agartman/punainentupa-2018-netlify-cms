@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
+import { BlogContent } from "../components/BlogContent";
 import ContactForm from "../components/ContactForm";
 const getSectionBySectionType = (
   {
@@ -26,20 +26,7 @@ const getSectionBySectionType = (
         edge => edge.node.frontmatter.templateKey === "blog-post"
       );
       return (
-        <div {...commonProps}>
-          <HTMLContent content={html} />
-          <ul>
-            {blogPosts.map(
-              ({ node: { id, fields: { slug }, frontmatter: { title } } }) => {
-                return (
-                  <li key={id}>
-                    <Link to={slug}>{title}</Link>
-                  </li>
-                );
-              }
-            )}
-          </ul>
-        </div>
+        <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />
       );
     default:
       return <HTMLContent {...commonProps} content={html} />;
