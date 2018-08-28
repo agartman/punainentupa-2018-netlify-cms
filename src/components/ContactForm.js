@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/contact.scss";
 export default class ContactForm extends React.Component {
   encode = data => {
     return Object.keys(data)
@@ -82,12 +83,9 @@ export default class ContactForm extends React.Component {
 
         <h4>Or send a message</h4>
 
-        <form
-          onSubmit={this.handleSubmit}
-        >
+        <form onSubmit={this.handleSubmit}>
           <div>
             <div>
-              <label htmlFor="name">Your Name</label>
               <input
                 onChange={this.handleChangeName}
                 required="required"
@@ -99,7 +97,6 @@ export default class ContactForm extends React.Component {
               />
             </div>
             <div>
-              <label htmlFor="email">Your Email</label>
               <input
                 onChange={this.handleChangeEmail}
                 required="required"
@@ -111,7 +108,6 @@ export default class ContactForm extends React.Component {
               />
             </div>
             <div>
-              <label htmlFor="message">Your message</label>
               <textarea
                 onChange={this.handleChangeMessage}
                 value={this.state.contactMessage}
@@ -126,7 +122,11 @@ export default class ContactForm extends React.Component {
                 disabled={this.state.loaded || this.state.loading}
                 type="submit"
                 title={this.state.buttonText}
+                className="btn btn-1"
               >
+                <svg>
+                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
+                </svg>
                 {this.state.buttonText}
               </button>
             </div>
