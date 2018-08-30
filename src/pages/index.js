@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HTMLContent } from "../components/Content";
+import { MarkDownContent } from "../components/Content";
 import { BlogContent } from "../components/BlogContent";
 import ContactForm from "../components/ContactForm";
 const getSectionBySectionType = (
   {
     node: {
+      rawMarkdownBody,
       html,
       frontmatter: { title, sectionType, theme, class: className, alignment }
     }
@@ -20,16 +21,14 @@ const getSectionBySectionType = (
   };
   switch (sectionType) {
     case "contact":
-      return <ContactForm  {...commonProps} />;
+      return <ContactForm {...commonProps} />;
     case "blog":
       const blogPosts = edges.filter(
         edge => edge.node.frontmatter.templateKey === "blog-post"
       );
-      return (
-        <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />
-      );
+      return <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />;
     default:
-      return <HTMLContent {...commonProps} content={html} />;
+      return <MarkDownContent {...commonProps} markdown={rawMarkdownBody} />;
   }
 };
 export default class IndexPage extends React.Component {
@@ -66,7 +65,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html
+          html,
+          rawMarkdownBody
           fields {
             slug
           }

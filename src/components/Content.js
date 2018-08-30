@@ -1,19 +1,31 @@
-import React, { Children } from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
+import MarkDownComponent from "./MarkDownComponent";
 
 export const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
-)
+);
+
+export const MarkDownContent = ({ markdown, className }) => (
+  <div className={className}>
+    <MarkDownComponent className={className} markdown={markdown} />
+  </div>
+);
 
 const Content = ({ content, className }) => (
   <div className={className}>{content}</div>
-)
+);
 
 Content.propTypes = {
   content: PropTypes.string,
-  className: PropTypes.string,
-}
+  className: PropTypes.string
+};
 
-HTMLContent.propTypes = Content.propTypes
+MarkDownContent.propTypes = {
+  markdown: PropTypes.string,
+  className: PropTypes.string
+};
 
-export default Content
+HTMLContent.propTypes = Content.propTypes;
+
+export default Content;

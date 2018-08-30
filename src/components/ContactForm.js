@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/contact.scss";
+import Button from "../components/Button";
+
 export default class ContactForm extends React.Component {
   encode = data => {
     return Object.keys(data)
@@ -118,17 +120,7 @@ export default class ContactForm extends React.Component {
               />
             </div>
             <div>
-              <button
-                disabled={this.state.loaded || this.state.loading}
-                type="submit"
-                title={this.state.buttonText}
-                className="btn btn-1"
-              >
-                <svg>
-                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                </svg>
-                {this.state.buttonText}
-              </button>
+              <Button title="Send" type="submit"></Button>
             </div>
             {this.state.loaded && <h2>Thanks. I'll get back to you ASAP.</h2>}
           </div>
