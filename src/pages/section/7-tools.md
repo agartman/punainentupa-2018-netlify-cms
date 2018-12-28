@@ -9,4 +9,4 @@ alignment: left
 
 # Tools and frameworks I like
 
-* Ramda, Gatsby
+* Ramda, Gatsby, VS Code, Git 

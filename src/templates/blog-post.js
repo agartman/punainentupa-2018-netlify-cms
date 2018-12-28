@@ -19,12 +19,8 @@ export const BlogPostTemplate = ({
         className={`section angled hero bg-red blog-hero`}
         content={title}
       />
-      <Content
-        className={`section regular bg-white blog-description`}
-        content={description}
-      />
       <HTMLContent
-        className={`section angled bg-lightgray textleft blog-post`}
+        className={`section angled bg-white textleft blog-post`}
         content={content}
       />
     </div>

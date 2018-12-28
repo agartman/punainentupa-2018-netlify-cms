@@ -1,0 +1,69 @@
+
+p {
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-top: 0.5em;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 5.5vw;
+  color: #333;
+  @media (min-width: $screen-sm-min) {
+    font-size: 4.8vw;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 2.8vw;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 2.4vw;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    font-size: 1.8vw;
+  }
+}
+
+.section {
+  font-size: 1em;
+  /*@media screen and (min-width: $screen-md-min) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 18px;
+  }*/
+  h1,
+  h2,
+  h3,
+  ul {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    line-height: 1.8;
+    li {
+      padding-bottom: 15px;
+    }
+  }
+  ul {
+    font-size: 0.8em;
+    padding: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+.textright {
+  text-align: right;
+}
+
+.textcenter {
+  text-align: center;
+}

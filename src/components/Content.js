@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import MarkDownComponent from "./MarkDownComponent";
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <div className={className}>
+  <div dangerouslySetInnerHTML={{ __html: content }} />
+  </div>
 );
 
 export const MarkDownContent = ({ markdown, className }) => (

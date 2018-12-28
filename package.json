@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "punainen-tupa-site",
+  "description": "Based on Example of Gatsby, and Netlify CMS project",
+  "version": "1.0",
+  "author": "Atte Gartman",
   "dependencies": {
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.46",
@@ -20,6 +20,8 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "typeface-josefin-sans": "0.0.54",
+    "typeface-rubik": "0.0.54",
     "uuid": "^3.2.1"
   },
   "keywords": [
