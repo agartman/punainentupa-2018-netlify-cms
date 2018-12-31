@@ -9,15 +9,21 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   title,
-  helmet
+  helmet,
+  date
 }) => {
   const PostContent = contentComponent || Content;
-
+  const titleContent = (
+    <React.Fragment>
+      {title}
+      <time>{date}</time>
+    </React.Fragment>
+  );
   return (
     <div>
       <Content
         className={`section angled hero bg-red blog-hero`}
-        content={title}
+        content={titleContent}
       />
       <HTMLContent
         className={`section angled bg-white textleft blog-post`}
@@ -45,6 +51,7 @@ const BlogPost = ({ data }) => {
       description={post.frontmatter.description}
       helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
       title={post.frontmatter.title}
+      date={post.frontmatter.date}
     />
   );
 };

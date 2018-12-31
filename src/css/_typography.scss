@@ -1,10 +1,4 @@
 
-p {
-  font-size: 0.8em;
-  font-weight: 400;
-  margin-top: 0.5em;
-}
-
 body {
   font-family: "Rubik", sans-serif;
   font-size: 5.5vw;
@@ -24,39 +18,67 @@ body {
   @media (min-width: $screen-xl-min) {
     font-size: 1.8vw;
   }
+
+  p {
+    line-height: 1.8em;
+  }
+}
+
+time {
+  font-size: 0.6em;
+}
+
+blockquote {
+  border-left: 4px solid $red;
+  padding-left: 30px;
+  margin-left: 0px;
+  font-style: italic;
 }
 
 .section {
   font-size: 1em;
-  /*@media screen and (min-width: $screen-md-min) {
-    font-size: 12px;
-  }
-  @media screen and (min-width: $screen-lg-min) {
-    font-size: 18px;
-  }*/
   h1,
   h2,
   h3,
   ul {
     font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase;
-    line-height: 1.8;
     li {
       padding-bottom: 15px;
+      p {
+        text-transform: none;
+        strong {
+          &:after {
+            content: ' - '
+          }
+        }
+      }
     }
   }
   ul {
-    font-size: 0.8em;
     padding: 0px;
   }
   a {
     text-decoration: none;
   }
 
-  h1,
-  h2,
-  h3 {
+  h1 {
     font-size: 1.2em;
+    @media (min-width: $screen-wide-min) {
+      font-size: 1em;
+    }
+  }
+  h2 {
+    font-size: 1em;
+    @media (min-width: $screen-wide-min) {
+      font-size: 0.9em;
+    }
+  }
+  h3 {
+    font-size: 0.8em;
+    @media (min-width: $screen-wide-min) {
+      font-size: 0.6em;
+    }
   }
 }
 

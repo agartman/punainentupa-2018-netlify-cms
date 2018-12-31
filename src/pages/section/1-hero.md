@@ -8,6 +8,6 @@ alignment: left
 ---
 ![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
 
-# Moi, mun nimi on Atte!
+# Hi, I'm Atte!
 
-# Freelancer full stack web -kehittäjä
+# Freelancer full stack web -developer

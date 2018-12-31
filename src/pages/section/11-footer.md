@@ -9,5 +9,6 @@ alignment: center
 ![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
 
 # Punainen Tupa Solutions Oy
+## Atte Gartman
 ## ID: 2885120-2
 ## Since 6.2.2018

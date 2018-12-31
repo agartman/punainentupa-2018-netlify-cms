@@ -4,7 +4,7 @@
 @import "typography";
 
 body {
-  background-color: white;
+  background-color: $white;
   margin: 0px;
 }
 
@@ -16,7 +16,7 @@ body {
     @include sectioncolors($darkgray, $darkgraytext);
   }
   &-red {
-    @include sectioncolors($red, #ffffff);
+    @include sectioncolors($red, $white);
   }
 }
 
@@ -94,14 +94,24 @@ body {
 }
 .blog {
   &-hero {
+    display: flex;
+    flex-direction: column;
     font-family: "Josefin Sans", sans-serif;
     top: -100px;
     padding: 20% 10vmin;
     @media (min-width: $screen-sm-min) {
-      top: -120px;      
-    }  
+      top: -120px;
+    }
     @media (min-width: $screen-md-min) {
       padding: 15% 10vmin;
+    }
+    @media (min-width: $screen-wide-min) {
+      padding: 10% 10vmin;
+      top: -150px;
+    }
+    @media (min-width: $screen-ultrawide-min) {
+      padding: 5% 10vmin;
+      top: -210px;
     }
     &::before,
     &::after {
@@ -110,17 +120,48 @@ body {
         padding-top: 25vmin;
       }
     }
+    time {
+      padding-top: 1em;
+    }
   }
   &-description {
     padding: 10% 10vmin;
   }
   &-post {
+    ul {
+      font-family: "Rubik", sans-serif;
+      li {
+        text-transform: none;
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+    }
+    padding: 0% 10vmin;
     > div {
       margin-left: auto;
       margin-right: auto;
       max-width: 600px;
+      @media (min-width: $screen-wide-min) {
+        max-width: 1200px;
+      }
     }
-    padding: 0% 10vmin;
+    p {
+      @media (min-width: $screen-wide-min) {
+        font-size: 0.45em;
+      }
+    }
+    h1,
+    h2,
+    h3 {
+      line-height: 1.8em;
+      @media (min-width: $screen-wide-min) {
+        font-size: 1em;
+        line-height: 1.2em;
+      }
+    }
+    a, a:visited, a:focus {
+      color: $red;
+    }
   }
 }
 .fullstack {

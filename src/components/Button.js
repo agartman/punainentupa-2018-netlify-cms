@@ -12,9 +12,6 @@ const Button = props => {
         title={buttonText}
         className={"btn btn-1 " + className}
       >
-        <svg>
-          <rect x="0" y="0" fill="none" width="100%" height="100%" />
-        </svg>
         {buttonText}
       </button>
     </div>
