@@ -63,18 +63,15 @@ export default class ContactForm extends React.Component {
   };
 
   handleChangeMessage(event) {
-    this.state.loaded = false;
-    this.setState({ contactMessage: event.target.value });
+    this.setState({ loaded: false, contactMessage: event.target.value });
   }
 
   handleChangeName(event) {
-    this.state.loaded = false;
-    this.setState({ contactName: event.target.value });
+    this.setState({ loaded: false, contactName: event.target.value });
   }
 
   handleChangeEmail(event) {
-    this.state.loaded = false;
-    this.setState({ contactEmail: event.target.value });
+    this.setState({ loaded: false, contactEmail: event.target.value });
   }
 
   render() {

@@ -4,22 +4,23 @@
   "version": "1.0",
   "author": "Atte Gartman",
   "dependencies": {
-    "gatsby": "^1.9.213",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-netlify": "^1.0.19",
-    "gatsby-plugin-netlify-cms": "^1.0.9",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-sass": "^1.0.17",
-    "gatsby-plugin-sharp": "^1.6.34",
-    "gatsby-remark-images": "^1.5.50",
-    "gatsby-source-filesystem": "^1.5.23",
-    "gatsby-transformer-remark": "^1.7.33",
-    "gatsby-transformer-sharp": "^1.6.21",
-    "markdown-to-jsx": "^6.7.2",
-    "netlify-cms": "^1.7.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-helmet": "^5.2.0",
+    "gatsby": "latest",
+    "gatsby-link": "latest",
+    "gatsby-plugin-netlify": "latest",
+    "gatsby-plugin-netlify-cms": "latest",
+    "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-sass": "latest",
+    "gatsby-plugin-sharp": "latest",
+    "gatsby-remark-images": "latest",
+    "gatsby-source-filesystem": "latest",
+    "gatsby-transformer-remark": "latest",
+    "gatsby-transformer-sharp": "latest",
+    "markdown-to-jsx": "latest",
+    "netlify-cms": "latest",
+    "node-sass": "^4.11.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-helmet": "latest",
     "typeface-josefin-sans": "0.0.54",
     "typeface-rubik": "0.0.54",
     "uuid": "^3.2.1"
@@ -38,6 +39,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "prettier": "^1.7.4",
+    "webpack": "latest",
+    "webpack-cli": "latest"
   }
 }

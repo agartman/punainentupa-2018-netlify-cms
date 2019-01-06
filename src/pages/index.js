@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { MarkDownContent } from "../components/Content";
 import { BlogContent } from "../components/BlogContent";
 import ContactForm from "../components/ContactForm";
+import { graphql } from 'gatsby'
 const getSectionBySectionType = (
   {
     node: {

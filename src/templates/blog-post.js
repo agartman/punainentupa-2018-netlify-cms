@@ -1,18 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
+import TemplateWrapper from "../layouts/index";
+import { graphql } from 'gatsby'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   title,
-  helmet,
   date
 }) => {
-  const PostContent = contentComponent || Content;
   const titleContent = (
     <React.Fragment>
       {title}
@@ -20,7 +18,7 @@ export const BlogPostTemplate = ({
     </React.Fragment>
   );
   return (
-    <div>
+    <TemplateWrapper>
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={titleContent}
@@ -29,7 +27,7 @@ export const BlogPostTemplate = ({
         className={`section angled bg-white textleft blog-post`}
         content={content}
       />
-    </div>
+    </TemplateWrapper>
   );
 };
 

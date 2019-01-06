@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
 import PropTypes from 'prop-types'
