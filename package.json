@@ -4,8 +4,8 @@
   "version": "1.0",
   "author": "Atte Gartman",
   "dependencies": {
-    "gatsby": "latest",
-    "gatsby-link": "latest",
+    "gatsby": "2.0.85",
+    "gatsby-link": "2.0.7",
     "gatsby-plugin-netlify": "latest",
     "gatsby-plugin-netlify-cms": "latest",
     "gatsby-plugin-react-helmet": "latest",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "yarn develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
