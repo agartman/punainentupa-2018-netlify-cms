@@ -19,7 +19,7 @@
     "netlify-cms": "latest",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
-    "react": "latest",
+    "react": "^16.6.3",
     "react-helmet": "latest",
     "typeface-josefin-sans": "0.0.54",
     "typeface-rubik": "0.0.54",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "prettier": "^1.7.4",
-    "webpack": "latest",
+    "webpack": "^4.16.0",
     "webpack-cli": "latest"
   }
 }

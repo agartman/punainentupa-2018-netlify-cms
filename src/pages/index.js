@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { MarkDownContent } from "../components/Content";
 import { BlogContent } from "../components/BlogContent";
 import ContactForm from "../components/ContactForm";
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby";
+import TemplateWrapper from "../layouts";
 const getSectionBySectionType = (
   {
     node: {
@@ -38,16 +39,18 @@ export default class IndexPage extends React.Component {
     const { edges } = data.allMarkdownRemark;
 
     return (
-      <div className="container">
-        {edges
-          .filter(edge => edge.node.frontmatter.templateKey === "index")
-          .sort((a, b) => {
-            return (
-              a.node.frontmatter.orderNumber - b.node.frontmatter.orderNumber
-            );
-          })
-          .map(sectionNode => getSectionBySectionType(sectionNode, edges))}
-      </div>
+      <TemplateWrapper>
+        <div className="container">
+          {edges
+            .filter(edge => edge.node.frontmatter.templateKey === "index")
+            .sort((a, b) => {
+              return (
+                a.node.frontmatter.orderNumber - b.node.frontmatter.orderNumber
+              );
+            })
+            .map(sectionNode => getSectionBySectionType(sectionNode, edges))}
+        </div>
+      </TemplateWrapper>
     );
   }
 }
@@ -66,7 +69,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html,
+          html
           rawMarkdownBody
           fields {
             slug
