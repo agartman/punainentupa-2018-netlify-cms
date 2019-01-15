@@ -77,11 +77,9 @@ export default class ContactForm extends React.Component {
   render() {
     return (
       <div className={this.props.className}>
-        <h2>Let's talk!</h2>
-        <h4>Call me on +358 50 371 3477</h4>
-
-        <h4>Or send a message</h4>
-
+        <h1>Let's talk</h1>
+        <h2><a href="mailto:atte@punainentupa.fi">atte@punainentupa.fi</a></h2>
+        <h2>Or send a message</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <div>

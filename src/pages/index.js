@@ -82,6 +82,8 @@ export const pageQuery = graphql`
             sectionType
             alignment
             class
+            active
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

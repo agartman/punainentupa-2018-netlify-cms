@@ -7,4 +7,4 @@ sectionType: blog
 theme: white
 alignment: left
 ---
-# Something I learned!
+# Something I learned

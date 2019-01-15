@@ -41,8 +41,6 @@ blockquote {
   h2,
   h3,
   ul {
-    font-family: "Josefin Sans", sans-serif;
-    text-transform: uppercase;
     li {
       padding-bottom: 15px;
       p {
@@ -58,26 +56,28 @@ blockquote {
   ul {
     padding: 0px;
   }
-  a {
-    text-decoration: none;
-  }
-
+  
   h1 {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
     font-size: 1.2em;
+    line-height: 1.8em;
     @media (min-width: $screen-wide-min) {
       font-size: 1em;
     }
   }
   h2 {
     font-size: 1em;
+    line-height: 1.4em;
     @media (min-width: $screen-wide-min) {
       font-size: 0.9em;
     }
   }
   h3 {
     font-size: 0.8em;
+    line-height: 2em;
     @media (min-width: $screen-wide-min) {
-      font-size: 0.6em;
+      font-size: 0.8em;
     }
   }
 }
@@ -88,4 +88,11 @@ blockquote {
 
 .textcenter {
   text-align: center;
+}
+
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
 }

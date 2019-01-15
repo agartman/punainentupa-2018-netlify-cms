@@ -9,6 +9,14 @@ body {
 }
 
 .bg {
+  &-white {
+    a,
+    a:active,
+    a:focus,
+    a:visited {
+      color: $lightgraytext;
+    }
+  }
   &-lightgray {
     @include sectioncolors($lightgray, $lightgraytext);
   }
@@ -17,6 +25,12 @@ body {
   }
   &-red {
     @include sectioncolors($red, $white);
+    a,
+    a:active,
+    a:focus,
+    a:visited {
+      color: white;
+    }
   }
 }
 
@@ -28,6 +42,11 @@ body {
 
   ul {
     list-style-type: none;
+    line-height: 1.6em;
+    li {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &::before,
   &::after {
@@ -99,6 +118,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
     top: -100px;
     padding: 20% 10vmin;
+    line-height: 1.8em;
     @media (min-width: $screen-sm-min) {
       top: -120px;
     }
@@ -128,15 +148,21 @@ body {
     padding: 10% 10vmin;
   }
   &-post {
+    img {
+      max-height: 20vh;
+      width: 100%;
+      margin: auto;
+    }
     ul {
       font-family: "Rubik", sans-serif;
+      list-style-type: disc;
       li {
+        display: list-item;
         text-transform: none;
-        list-style-type: disc;
         margin-left: 20px;
       }
     }
-    padding: 0% 10vmin;
+    padding: 0% 5vmin;
     > div {
       margin-left: auto;
       margin-right: auto;
@@ -145,21 +171,26 @@ body {
         max-width: 1200px;
       }
     }
-    p {
+    h1,
+    h2 {
+      line-height: 2em;
       @media (min-width: $screen-wide-min) {
-        font-size: 0.45em;
+        font-size: 1.2em;
+        line-height: 1.4em;
       }
     }
-    h1,
-    h2,
     h3 {
       line-height: 1.8em;
+      font-size: 1.2em;
+
       @media (min-width: $screen-wide-min) {
         font-size: 1em;
         line-height: 1.2em;
       }
     }
-    a, a:visited, a:focus {
+    a,
+    a:visited,
+    a:focus {
       color: $red;
     }
   }
