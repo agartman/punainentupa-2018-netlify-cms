@@ -1,20 +1,14 @@
 import React from "react";
 import Link from "gatsby-link";
 
-import logo from "../img/logo.svg";
-
-const Navbar = () => (
+const revertedLanguage = language => (language === "fi" ? "en" : "fi");
+export default ({ language }) => (
   <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            Home
-          </figure>
-        </Link>
-      </div>
-    </div>
+    <Link to={language === "fi" ? `/en/` : "/"}>
+      <img
+        className="hero--flag"
+        src={`/img/${revertedLanguage(language)}.svg`}
+      />
+    </Link>
   </nav>
 );
-
-export default Navbar;

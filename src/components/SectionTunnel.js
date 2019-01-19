@@ -36,21 +36,6 @@ export const SectionTunnel = (
         edge => edge.node.frontmatter.templateKey === "blog-post"
       );
       return <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />;
-    case "hero":
-      const revertedLanguage = language === "fi" ? "en" : "fi";
-      return (
-        <div>
-          <MarkDownContent {...commonProps} markdown={rawMarkdownBody}>
-            <Link to={language === "fi" ? `/en/` : "/"}>
-              <img
-                className="hero--flag"
-                src={`/img/${revertedLanguage}.svg`}
-              />
-            </Link>
-          </MarkDownContent>
-        </div>
-      );
-
     default:
       return <MarkDownContent {...commonProps} markdown={rawMarkdownBody} />;
   }

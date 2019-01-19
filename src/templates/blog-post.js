@@ -4,14 +4,8 @@ import Helmet from "react-helmet";
 import Content, { HTMLContent } from "../components/Content";
 import TemplateWrapper from "../layouts/index";
 import { graphql } from "gatsby";
-import Button from "../components/Button";
-
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  title,
-  date
-}) => {
+import LeftArrow from '../img/left.png'
+export const BlogPostTemplate = ({ content, title, date }) => {
   const titleContent = (
     <React.Fragment>
       {title}
@@ -29,14 +23,13 @@ export const BlogPostTemplate = ({
         content={content}
       />
       <div className="blog-footer">
-        <Button
-          className="btn btn-1"
-          title={"\u{21A9}"}
-          onClick={e => {
-            e.preventDefault();
+        <div
+          onClick={() => {
             window.history.back();
           }}
-        />
+        >
+        <img src={LeftArrow} className="arrow"/>
+        </div>
       </div>
     </TemplateWrapper>
   );

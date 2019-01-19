@@ -1,19 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import 'typeface-rubik'
-import 'typeface-josefin-sans'
-import '../css/style.scss'
-
-const TemplateWrapper = ({ children, className }) => (
+import React from "react";
+import Helmet from "react-helmet";
+import "typeface-rubik";
+import "typeface-josefin-sans";
+import "../css/style.scss";
+import Navbar from "../components/Navbar";
+export default ({ children, language, className, shownav }) => (
   <div>
     <Helmet title="Atte Gartman - Punainen Tupa Solutions" />
+    {shownav && <Navbar language={language} />}
     <div className={className}>{children}</div>
   </div>
-)
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper
+);
