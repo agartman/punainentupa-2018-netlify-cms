@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import 'typeface-rubik'
 import 'typeface-josefin-sans'
-import Navbar from '../components/Navbar'
 import '../css/style.scss'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, className }) => (
   <div>
     <Helmet title="Atte Gartman - Punainen Tupa Solutions" />
-    <Navbar />
-    <div>{children}</div>
+    <div className={className}>{children}</div>
   </div>
 )
 

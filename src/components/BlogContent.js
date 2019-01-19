@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 export const BlogContent = ({ className, blogPosts, html }) => (
   <div className={className}>
     <HTMLContent content={html} />
+    <a href="#" name="blog" />
     <ul>
       {blogPosts.map(
         ({

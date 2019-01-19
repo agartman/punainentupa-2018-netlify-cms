@@ -6,10 +6,9 @@ class: fullstack
 sectionType: simple
 theme: lightgray
 alignment: center
-language: en
-
+language: fi
 ---
 ![](/img/omakuva.png)
 
-# How can I help your team and your business?
-### Anything from a small business website, to a global e-commerce site.
+# Kuinka voin auttaa?
+### Etsitkö kokenutta devaajaa tiimiin, tarvitsetko verkkokaupan tai www-sivut?

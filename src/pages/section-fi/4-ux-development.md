@@ -5,11 +5,11 @@ orderNumber: 4
 sectionType: highlight
 theme: red
 alignment: right
-language: en
-
+language: fi
 ---
-# UX development
+# Modernia UX-kehitystä
 
-* 15 years hands-on web dev
+* 15 vuoden kokemus web-kehityksestä
+* Responsiivinen ja nopea käyttökokemus
 * ES6, TypeScript, SCSS
 * React, Vue, Redux

@@ -4,13 +4,14 @@ import MarkDownComponent from "./MarkDownComponent";
 
 export const HTMLContent = ({ content, className }) => (
   <div className={className}>
-  <div dangerouslySetInnerHTML={{ __html: content }} />
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </div>
 );
 
-export const MarkDownContent = ({ markdown, className }) => (
-  <div className={className}>
-    <MarkDownComponent className={className} markdown={markdown} />
+export const MarkDownContent = props => (
+  <div className={props.className}>
+    <MarkDownComponent className={props.className} markdown={props.markdown} />
+    {props.children}
   </div>
 );
 
@@ -24,6 +25,7 @@ Content.propTypes = {
 };
 
 MarkDownContent.propTypes = {
+  children: PropTypes.any,
   markdown: PropTypes.string,
   className: PropTypes.string
 };

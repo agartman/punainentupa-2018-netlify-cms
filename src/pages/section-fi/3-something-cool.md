@@ -6,7 +6,6 @@ class: blog
 sectionType: blog
 theme: white
 alignment: left
-language: en
-
+language: fi
 ---
-# Something I learned
+# Ajatuksia eri aiheista

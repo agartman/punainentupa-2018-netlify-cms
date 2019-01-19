@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Content, { HTMLContent } from "../components/Content";
 import TemplateWrapper from "../layouts/index";
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby";
+import Button from "../components/Button";
 
 export const BlogPostTemplate = ({
   content,
@@ -18,7 +19,7 @@ export const BlogPostTemplate = ({
     </React.Fragment>
   );
   return (
-    <TemplateWrapper>
+    <TemplateWrapper className={"blog"}>
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={titleContent}
@@ -27,6 +28,16 @@ export const BlogPostTemplate = ({
         className={`section angled bg-white textleft blog-post`}
         content={content}
       />
+      <div className="blog-footer">
+        <Button
+          className="btn btn-1"
+          title={"\u{21A9}"}
+          onClick={e => {
+            e.preventDefault();
+            window.history.back();
+          }}
+        />
+      </div>
     </TemplateWrapper>
   );
 };

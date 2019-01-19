@@ -5,10 +5,10 @@ orderNumber: 1
 sectionType: hero
 theme: white
 alignment: left
-language: en
+language: fi
 ---
 ![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
 
-# Hi, I'm Atte
+# Moi, Mun nimi on Atte Gartman
 
-# Freelancer full stack web -developer
+# Full stack web -kehittäjä

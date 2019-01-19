@@ -5,9 +5,9 @@ orderNumber: 7
 sectionType: highlight
 theme: white
 alignment: left
-language: en
+language: fi
 ---
 
-# Tools and frameworks I like
+# Työkaluja joista tykkään
 
 * Ramda, Gatsby, VS Code, Git 

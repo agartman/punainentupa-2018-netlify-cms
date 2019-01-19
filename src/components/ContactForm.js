@@ -2,6 +2,27 @@ import React from "react";
 import "../css/contact.scss";
 import Button from "../components/Button";
 
+const finnishButtonTexts = {
+  sendButton: 'Lähetä',
+  sending: "Lähetetään...",
+  thanks: "Kiitti. Vastaan pian viestiisi.",
+  placeholderName: "Nimi",
+  placeholderEmail: "Sähköpostiosoite",
+  placeholderMessage: "Viesti",
+  errorOccured: "Hups, jotain hassua tapahtui.",
+  done: "Viesti lähti liikkeelle.",
+}
+const englishButtonTexts = {
+  sendButton: 'Send',
+  sending: "Sending...",
+  thanks: "Thanks. I'll get back to you ASAP.",
+  placeholderName: "Name",
+  placeholderEmail: "E-mail",
+  placeholderMessage: "Message",
+  errorOccured: "Error occured, oops.",
+  done: "Done.",
+}
+
 export default class ContactForm extends React.Component {
   encode = data => {
     return Object.keys(data)
@@ -9,14 +30,17 @@ export default class ContactForm extends React.Component {
       .join("&");
   };
 
+  texts() {
+    return this.props.language === 'fi' ? finnishButtonTexts : englishButtonTexts
+  }
+
   constructor(params) {
     super(params);
     this.state = {
-      title: "Let's talk!",
       loading: false,
       loaded: false,
       email: "",
-      buttonText: "Send"
+      buttonText: this.texts().sendButton
     };
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -27,7 +51,7 @@ export default class ContactForm extends React.Component {
   handleSubmit = e => {
     this.setState({
       loading: true,
-      buttonText: "Sending...",
+      buttonText: this.texts().sending,
       contactEmail: "",
       contactMessage: "",
       contactName: ""
@@ -48,8 +72,8 @@ export default class ContactForm extends React.Component {
         this.setState({
           loading: false,
           loaded: true,
-          title: "Thanks! I got ya! VIP list updated.",
-          buttonText: "Done"
+          title: this.texts().thanks,
+          buttonText: this.texts().done
         });
       })
       .catch(error => {
@@ -57,7 +81,7 @@ export default class ContactForm extends React.Component {
         this.setState({
           loading: false,
           loaded: true,
-          buttonText: "Error occured, oops."
+          buttonText: this.texts().errorOccured
         });
       });
   };
@@ -75,11 +99,10 @@ export default class ContactForm extends React.Component {
   }
 
   render() {
+    const texts = this.texts();
     return (
       <div className={this.props.className}>
-        <h1>Let's talk</h1>
-        <h2><a href="mailto:atte@punainentupa.fi">atte@punainentupa.fi</a></h2>
-        <h2>Or send a message</h2>
+        <div dangerouslySetInnerHTML={{__html: this.props.html}}></div>
         <form onSubmit={this.handleSubmit}>
           <div>
             <div>
@@ -90,7 +113,7 @@ export default class ContactForm extends React.Component {
                 value={this.state.contactName}
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder={texts.placeholderName}
               />
             </div>
             <div>
@@ -101,7 +124,7 @@ export default class ContactForm extends React.Component {
                 value={this.state.contactEmail}
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder={texts.placeholderEmail}
               />
             </div>
             <div>
@@ -111,13 +134,13 @@ export default class ContactForm extends React.Component {
                 id="message"
                 name="message"
                 type="text"
-                placeholder="Your message"
+                placeholder={texts.placeholderMessage}
               />
             </div>
             <div>
-              <Button title="Send" type="submit"></Button>
+              <Button title={texts.sendButton} type="submit"></Button>
             </div>
-            {this.state.loaded && <h2>Thanks. I'll get back to you ASAP.</h2>}
+            {this.state.loaded && <h2>{texts.thanks}</h2>}
           </div>
         </form>
       </div>
