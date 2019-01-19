@@ -11,6 +11,11 @@ body {
 nav {
   text-align: right;
   padding-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  a {
+    min-width: 100px;
+  }
 }
 
 .bg {
@@ -145,6 +150,10 @@ nav {
       cursor: pointer;
       @media (min-width: $screen-md-min) {
         max-height: 10vh;
+      }
+      &:hover {
+        transition: all .2s ease-in-out;
+        opacity: 0.6;
       }
     }
     width: 100%;
