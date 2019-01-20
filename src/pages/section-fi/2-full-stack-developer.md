@@ -11,4 +11,4 @@ language: fi
 ![](/img/omakuva.png)
 
 # Kuinka voin auttaa?
-### Etsitkö kokenutta devaajaa tiimiin, tarvitsetko verkkokaupan tai www-sivut?
+### Etsitkö kokenutta devaajaa tiimiin, tarvitsetko verkkokaupan tai web-saitin?
