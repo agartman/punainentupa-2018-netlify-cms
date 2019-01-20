@@ -8,4 +8,4 @@ theme: white
 alignment: left
 language: fi
 ---
-# Ajatuksia eri aiheista
+# Blogi
