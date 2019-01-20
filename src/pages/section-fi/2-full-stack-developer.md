@@ -8,7 +8,7 @@ theme: lightgray
 alignment: center
 language: fi
 ---
-![](/img/omakuva.png)
+![](/img/kolaaja.jpg)
 
 # Kuinka voin auttaa?
 ### Etsitkö kokenutta devaajaa tiimiin, tarvitsetko verkkokaupan tai web-saitin?
