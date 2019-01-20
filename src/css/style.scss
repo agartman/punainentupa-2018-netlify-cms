@@ -31,7 +31,7 @@ nav {
     @include sectioncolors($lightgray, $lightgraytext);
   }
   &-darkgray {
-    @include sectioncolors($darkgray, $darkgraytext);
+    @include sectioncolors($darkgray, $white);
   }
   &-red {
     @include sectioncolors($red, $white);
