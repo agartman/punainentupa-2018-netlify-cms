@@ -7,7 +7,8 @@ theme: darkgray
 alignment: right
 language: en
 ---
-# Teams and culture
+# I prefer teams who are
 
 * Continuosly improving
-* Open
+* Open for everybody's opinion
+* Close co-operation with customer
