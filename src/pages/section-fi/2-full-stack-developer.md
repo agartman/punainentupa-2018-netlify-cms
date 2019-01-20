@@ -8,7 +8,10 @@ theme: lightgray
 alignment: center
 language: fi
 ---
-![](/img/kolaaja.jpg)
+<picture>
+  <source srcset="/img/portrait.webp" type="image/webp">
+  <img src="/img/portrait.png">
+</picture> 
 
 # Kuinka voin auttaa?
 ### Etsitkö kokenutta devaajaa tiimiin, tarvitsetko verkkokaupan tai web-saitin?
