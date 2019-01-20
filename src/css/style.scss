@@ -210,8 +210,8 @@ nav {
 }
 .fullstack {
   img {
-    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    -webkit-clip-path: circle();
+    clip-path: circle(  );
     width: 50vmin;
   }
 }
