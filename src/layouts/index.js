@@ -1,12 +1,12 @@
 import React from "react";
-import Helmet from "react-helmet";
 import "typeface-rubik";
 import "typeface-josefin-sans";
 import "../css/style.scss";
 import Navbar from "../components/Navbar";
-export default ({ children, language, className, shownav }) => (
+import SEO from "../components/SEO";
+export default ({ children, language, className, shownav, article }) => (
   <div>
-    <Helmet title="Atte Gartman - Punainen Tupa Solutions" />
+    <SEO article={article} />
     {shownav && <Navbar language={language} />}
     <div className={className}>{children}</div>
   </div>

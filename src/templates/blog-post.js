@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Content, { HTMLContent } from "../components/Content";
-import TemplateWrapper from "../layouts/index";
+import Layout from "../layouts/index";
 import { graphql } from "gatsby";
-import LeftArrow from '../img/left.png'
+import LeftArrow from "../img/left.png";
 export const BlogPostTemplate = ({ content, title, date }) => {
   const titleContent = (
     <React.Fragment>
@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({ content, title, date }) => {
     </React.Fragment>
   );
   return (
-    <TemplateWrapper className={"blog"}>
+    <Layout className={"blog"} article={true}>
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={titleContent}
@@ -28,10 +28,10 @@ export const BlogPostTemplate = ({ content, title, date }) => {
             window.history.back();
           }}
         >
-        <img src={LeftArrow} className="arrow"/>
+          <img src={LeftArrow} className="arrow" />
         </div>
       </div>
-    </TemplateWrapper>
+    </Layout>
   );
 };
 
