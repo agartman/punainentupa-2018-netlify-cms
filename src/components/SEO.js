@@ -1,15 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-const seo = {
-  title: "Atte Gartman - Punainen Tupa Solutions Oy",
-  description: "Full stack web -kehittäjä ja järjestelmäarkkitehti",
-  image: "https://punainentupa.fi/img/ogimage.png",
-  url: `https://punainentupa.fi`
-};
 
-export default ({ article }) => (
+export default ({ article, title, description }) => {
+  const seo = {
+    title: title || "Atte Gartman",
+    description: description || "Full stack web -kehittäjä ja järjestelmäarkkitehti",
+    image: "https://punainentupa.fi/img/ogimage.png",
+    url: `https://punainentupa.fi`
+  };
+  return (
     <>
-      <Helmet title={seo.title}>
+      <Helmet
+        title={seo.title}
+        titleTemplate={"%s - Punainen Tupa Solutions Oy"}
+      >
         <meta name="og:locale" content={"fi-FI"} />
         <meta name="og:locale:alternate" content={"en-GB"} />
         <meta name="description" content={seo.description} />
@@ -32,4 +36,5 @@ export default ({ article }) => (
         {seo.image && <meta name="twitter:image" content={seo.image} />}
       </Helmet>
     </>
-);
+  );
+};

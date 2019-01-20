@@ -5,7 +5,7 @@ import Content, { HTMLContent } from "../components/Content";
 import Layout from "../layouts/index";
 import { graphql } from "gatsby";
 import LeftArrow from "../img/left.png";
-export const BlogPostTemplate = ({ content, title, date }) => {
+export const BlogPostTemplate = ({ content, title, date, description }) => {
   const titleContent = (
     <React.Fragment>
       {title}
@@ -13,7 +13,12 @@ export const BlogPostTemplate = ({ content, title, date }) => {
     </React.Fragment>
   );
   return (
-    <Layout className={"blog"} article={true}>
+    <Layout
+      className={"blog"}
+      article={true}
+      title={title}
+      description={description}
+    >
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={titleContent}
@@ -51,7 +56,6 @@ const BlogPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
       title={post.frontmatter.title}
       date={post.frontmatter.date}
     />
