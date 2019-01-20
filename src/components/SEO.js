@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet";
 export default ({ article, title, description, slug }) => {
   const seo = {
     title: title || "Atte Gartman",
-    description: description || "Full stack web -kehittäjä ja järjestelmäarkkitehti",
+    description:
+      description || "Full stack web -kehittäjä ja järjestelmäarkkitehti",
     image: "https://punainentupa.fi/img/ogimage.png",
-    url: `https://punainentupa.fi${slug}`
+    url: `https://punainentupa.fi${slug ? slug : ""}`
   };
   return (
     <>
