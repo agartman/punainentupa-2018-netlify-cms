@@ -21,7 +21,7 @@
     "react-dom": "latest",
     "react-helmet": "latest",
     "typeface-josefin-sans": "0.0.54",
-    "typeface-rubik": "0.0.54",
+    "typeface-rubik": "0.0.54"
   },
   "keywords": [
     "gatsby"
