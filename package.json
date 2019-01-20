@@ -1,6 +1,6 @@
 {
   "name": "punainen-tupa-site",
-  "description": "Based on Example of Gatsby, and Netlify CMS project",
+  "description": "Punainen Tupa Solutions Oy website",
   "version": "1.0.0",
   "author": "Atte Gartman",
   "dependencies": {
@@ -22,7 +22,6 @@
     "react-helmet": "latest",
     "typeface-josefin-sans": "0.0.54",
     "typeface-rubik": "0.0.54",
-    "uuid": "^3.2.1"
   },
   "keywords": [
     "gatsby"
