@@ -4,9 +4,9 @@ import "typeface-josefin-sans";
 import "../css/style.scss";
 import Navbar from "../components/Navbar";
 import SEO from "../components/SEO";
-export default ({ children, language, className, shownav, article, title, description }) => (
+export default ({ children, language, className, shownav, article, title, description, slug }) => (
   <div>
-    <SEO article={article} title={title} description={description} />
+    <SEO article={article} title={title} description={description} slug={slug} />
     {shownav && <Navbar language={language} />}
     <div className={className}>{children}</div>
   </div>

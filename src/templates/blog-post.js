@@ -5,7 +5,13 @@ import Content, { HTMLContent } from "../components/Content";
 import Layout from "../layouts/index";
 import { graphql } from "gatsby";
 import LeftArrow from "../img/left.png";
-export const BlogPostTemplate = ({ content, title, date, description }) => {
+export const BlogPostTemplate = ({
+  content,
+  title,
+  date,
+  description,
+  slug
+}) => {
   const titleContent = (
     <React.Fragment>
       {title}
@@ -18,6 +24,7 @@ export const BlogPostTemplate = ({ content, title, date, description }) => {
       article={true}
       title={title}
       description={description}
+      slug={slug}
     >
       <Content
         className={`section angled hero bg-red blog-hero`}
@@ -58,6 +65,7 @@ const BlogPost = ({ data }) => {
       description={post.frontmatter.description}
       title={post.frontmatter.title}
       date={post.frontmatter.date}
+      slug={post.fields.slug}
     />
   );
 };
@@ -80,6 +88,9 @@ export const pageQuery = graphql`
         title
         description
         active
+      }
+      fields {
+        slug
       }
     }
   }

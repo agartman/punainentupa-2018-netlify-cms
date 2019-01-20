@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default ({ article, title, description }) => {
+export default ({ article, title, description, slug }) => {
   const seo = {
     title: title || "Atte Gartman",
     description: description || "Full stack web -kehittäjä ja järjestelmäarkkitehti",
     image: "https://punainentupa.fi/img/ogimage.png",
-    url: `https://punainentupa.fi`
+    url: `https://punainentupa.fi${slug}`
   };
   return (
     <>
