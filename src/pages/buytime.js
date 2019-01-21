@@ -5,33 +5,7 @@ import Helmet from "react-helmet";
 
 export default props => {
   return (
-    <Layout language="en" shownav={false}>
-      <Helmet
-        htmlAttributes={{ lang: "en" }}
-        meta={[{ name: "description", content: 'Buy consulting time' }]}
-        title={'Punainen Tupa Solutions Oy website - Buy time'}
-        link={[
-          {
-            href: "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
-            rel: "stylesheet",
-            type: "text/css"
-          }
-        ]}
-        script={[
-          {
-            type: "text/javascript",
-            url: "",
-            id: "snipcart",
-            "data-api-key": "OTk5YTUzOTItZWIwNC00NWM5LWEyYWUtMDBlYWU5MTMxNjRhNjM2ODM2NjcyNzkyODMzNjUw",
-            src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-          },
-          {
-            type: "text/javascript",
-            src:
-              "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-          }
-        ]}
-      />
+    <Layout language="en" shownav={false} shop={true}>
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={"Buy time"}
