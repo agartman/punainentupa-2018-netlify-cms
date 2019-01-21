@@ -20,15 +20,16 @@ export default () => {
         </p>
         <div className="shop-controls">
           <p>
-            <strong>Tuntihinta 110€</strong> + alv
+            <strong>Tuntihinta 150€</strong> + alv
           </p>
+
           <p>
             <a
               id="buyButton"
               href="#"
               className="snipcart-add-item btn btn-1"
               data-item-id={"time1h"}
-              data-item-price={110}
+              data-item-price={150}
               data-item-image={
                 "https://punainentupa.fi/img/punainentupalogo.svg"
               }
@@ -36,20 +37,41 @@ export default () => {
               data-item-description={"1h of work"}
               data-item-custom1-name={"Viesti"}
               data-item-custom1-value={""}
-              data-item-url={
-                "https://punainentupa.fi/buytime"
-              }
+              data-item-url={"https://punainentupa.fi/buytime"}
             >
-              Lisää 1h koriin
+              Osta 1-4 tuntia
             </a>
           </p>
+          <p>
+            <strong>Päivähinta 1000€</strong> + alv
+          </p>
+          <p>
+            <a
+              id="buyButton"
+              href="#"
+              className="snipcart-add-item btn btn-1"
+              data-item-id={"time1day"}
+              data-item-price={1000}
+              data-item-image={
+                "https://punainentupa.fi/img/punainentupalogo.svg"
+              }
+              data-item-name={"1 päivä aikaa"}
+              data-item-description={"1 day of work"}
+              data-item-custom1-name={"Viesti"}
+              data-item-custom1-value={""}
+              data-item-url={"https://punainentupa.fi/buytime"}
+            >
+              Osta 1 päivä
+            </a>
+          </p>
+          <p>Matkakulut alle 1h matkasta 0€.</p>
           <p>
             Voit tarvittaessa lähettää Skype-linkin, NDA:t tai muut
             yksityiskohdat sähköpostilla meiliin{" "}
             <a href="mailto:atte@punainentupa.fi">atte@punainentupa.fi</a>
           </p>
         </div>
-        <Link to="/">
+        <Link to="/" className="blog-footer">
           <img src={LeftArrow} className="arrow" />
         </Link>
       </div>
