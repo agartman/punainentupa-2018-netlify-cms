@@ -11,37 +11,41 @@ export default props => {
         content={"Buy time"}
       />
       <div className="blog-post">
-        <h3>Need some extra hands now?</h3>
+        <h3>Tarvitsetko lisäkäsiä heti?</h3>
         <p>
-          Do you need help with sales proposal? Or do you need help in
-          evaluating an offer? How about an Azure PaaS solution architecture?
+          Kiirettä tarjouksen kanssa? Haluaisitko arvion saamastasi
+          tarjouksesta? Tilaa muutama tunti niin katsotaan. Ei jäykkiä
+          toimeksiantosopimuksia.
         </p>
-        <a
-        style={{
-            backgroundColor: "#212121",
-            borderRadius: "5px",
-            color: "#F5F5F5",
-            fontWeight: "bold",
-            paddingBottom: "15px",
-            paddingTop: "15px",
-            paddingRight: "35px",
-            paddingLeft: "35px",
-            fontSize: "24"
-        }}
-        id="buyButton"
-        href='#' 
-        className='snipcart-add-item buyBtn'
-        data-item-id={'time1h'}
-        data-item-price={110}
-        //data-item-image={choosenImgSrc}
-        data-item-name={'1h of work'}
-        data-item-description={'1h of work'}
-        data-item-custom1-name={'onpremise'}
-        data-item-custom1-value={true}
-        data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buytime"}>
-        Buy for 110$
-    </a>
-        
+        <strong>110€ + VAT</strong>
+        <p>
+          <a
+            style={{
+              backgroundColor: "#212121",
+              borderRadius: "5px",
+              color: "#F5F5F5",
+              fontWeight: "bold",
+              paddingBottom: "15px",
+              paddingTop: "15px",
+              paddingRight: "35px",
+              paddingLeft: "35px",
+              fontSize: "24"
+            }}
+            id="buyButton"
+            href="#"
+            className="snipcart-add-item buyBtn"
+            data-item-id={"time1h"}
+            data-item-price={110}
+            //data-item-image={choosenImgSrc}
+            data-item-name={"1h of work"}
+            data-item-description={"1h of work"}
+            data-item-custom1-name={"onpremise"}
+            data-item-custom1-value={true}
+            data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buytime"}
+          >
+            Buy for 110$
+          </a>
+        </p>
       </div>
     </Layout>
   );

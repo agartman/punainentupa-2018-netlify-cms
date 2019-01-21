@@ -15,21 +15,23 @@ export default ({ article, title, description, slug, shop = false }) => {
         title={seo.title}
         titleTemplate={"%s - Punainen Tupa Solutions Oy"}
         script={
-          shop && [
-            {
-              type: "text/javascript",
-              url: "",
-              id: "snipcart",
-              "data-api-key":
-                "OTk5YTUzOTItZWIwNC00NWM5LWEyYWUtMDBlYWU5MTMxNjRhNjM2ODM2NjcyNzkyODMzNjUw",
-              src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-            },
-            {
-              type: "text/javascript",
-              src:
-                "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-            }
-          ]
+          shop
+            ? [
+                {
+                  type: "text/javascript",
+                  url: "",
+                  id: "snipcart",
+                  "data-api-key":
+                    "OTk5YTUzOTItZWIwNC00NWM5LWEyYWUtMDBlYWU5MTMxNjRhNjM2ODM2NjcyNzkyODMzNjUw",
+                  src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+                },
+                {
+                  type: "text/javascript",
+                  src:
+                    "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+                }
+              ]
+            : undefined
         }
       >
         <meta name="og:locale" content={"fi-FI"} />
