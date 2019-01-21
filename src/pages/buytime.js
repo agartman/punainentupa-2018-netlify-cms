@@ -63,9 +63,9 @@ export default props => {
         data-item-name={'1h of work'}
         data-item-description={'1h of work'}
         data-item-custom1-name={'onpremise'}
-        data-item-custom1-value={'true'}
-        data-item-url={"https://localhost:8000/buytime"}>
-        Buy for 100$
+        data-item-custom1-value={true}
+        data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buytime"}>
+        Buy for 110$
     </a>
         
       </div>
