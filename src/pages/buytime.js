@@ -1,9 +1,8 @@
 import React from "react";
 import Layout from "../layouts";
 import Content from "../components/Content";
-import Helmet from "react-helmet";
 
-export default props => {
+export default () => {
   return (
     <Layout language="en" shownav={false} shop={true}>
     
@@ -42,7 +41,7 @@ export default props => {
             data-item-description={"1h of work"}
             data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buytime"}
           >
-            Buy for 110$ga
+            Lisää 1h koriin
           </a>
         </p>
       </div>
