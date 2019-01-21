@@ -1,0 +1,22 @@
+@import "variables";
+.shop {
+  text-align: center;
+  p {
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    max-width: 60vw;
+    padding: 30px;
+  }
+  &-controls {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    .snipcart-add-item {
+      color: $white;
+      padding: 20px;
+    }
+  }
+}
