@@ -6,6 +6,7 @@ import Helmet from "react-helmet";
 export default props => {
   return (
     <Layout language="en" shownav={false} shop={true}>
+    
       <Content
         className={`section angled hero bg-red blog-hero`}
         content={"Buy time"}
@@ -37,13 +38,11 @@ export default props => {
             data-item-id={"time1h"}
             data-item-price={110}
             //data-item-image={choosenImgSrc}
-            data-item-name={"1h of work"}
+            data-item-name={"1h aikaa"}
             data-item-description={"1h of work"}
-            data-item-custom1-name={"onpremise"}
-            data-item-custom1-value={true}
             data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buytime"}
           >
-            Buy for 110$
+            Buy for 110$ga
           </a>
         </p>
       </div>

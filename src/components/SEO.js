@@ -14,6 +14,18 @@ export default ({ article, title, description, slug, shop = false }) => {
       <Helmet
         title={seo.title}
         titleTemplate={"%s - Punainen Tupa Solutions Oy"}
+        link={
+          shop
+            ? [
+                {
+                  href:
+                    "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
+                  rel: "stylesheet",
+                  type: "text/css"
+                }
+              ]
+            : undefined
+        }
         script={
           shop
             ? [
