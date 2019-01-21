@@ -9,6 +9,6 @@ language: fi
 ---
 
 # Osta konsultointia
-* Pidemmät toimeksiannot sopimuksen mukkaan
+* Pidemmät toimeksiannot sopimuksen mukaan
 * Aktiivisen työpajan voi tilata [tästä](/tyopaja)
 

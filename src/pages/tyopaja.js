@@ -6,7 +6,7 @@ const finnishButtonTexts = {
   buyTitle: "Osta konsultointia",
   descriptionContract:
     "Pidemmät toimeksiannot sopimuksen mukaan. Yksittäisellä työpajalla on hyvä lähteä liikkeelle.",
-  descriptionWorkshop: "Tulen paikan päälle, matkakulut sisältyy hintaan.",
+  descriptionWorkshop: "Tulen paikan päälle, matkakulut sisältyy hintaan. Maksu luottokortilla.",
   productName: "Työpajapäivä 1500€",
   VAT: "ALV",
   addToCart: "Lisää aktiivinen työpajapäivä koriin",
