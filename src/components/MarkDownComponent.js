@@ -1,24 +1,9 @@
 import React from "react";
 import Markdown from "markdown-to-jsx";
-import Button from "./Button";
+import Link from "gatsby-link";
 
 const MarkDownComponent = props => {
-  return (
-    (props.markdown && (
-      <Markdown
-        options={{
-          overrides: {
-            a: {
-              component: Button,
-              props: { className: "foo" }
-            }
-          }
-        }}
-      >
-        {props.markdown}
-      </Markdown>
-    )) || <div />
-  );
+  return (props.markdown && <Markdown>{props.markdown}</Markdown>) || <div />;
 };
 
 export default MarkDownComponent;

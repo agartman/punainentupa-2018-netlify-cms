@@ -1,25 +1,23 @@
 import React from "react";
 import Layout from "../layouts";
-import Content from "../components/Content";
+import Content from "./Content";
 import "../css/shop.scss";
 import LeftArrow from "../img/left.png";
 import Link from "gatsby-link";
 
-export default () => {
+export default ({ language, texts }) => {
   return (
-    <Layout language="en" shownav={false} shop={true}>
+    <Layout language={language} shownav={false} shop={true}>
       <Content
         className={`section angled hero bg-red blog-hero`}
-        content={"Buy consulting"}
+        content={texts.buyTitle}
       />
       <div className="shop">
-        <p>
-          Longer periods of work I do by contract. However here you can buy
-          individual workshop days.
-        </p>
+        <p>{texts.descriptionContract}</p>
+        <p>{texts.descriptionWorkshop}</p>
         <div className="shop-controls">
           <p>
-            <strong>Workshop day 1500€</strong> + VAT
+            <strong>{texts.productName}</strong> + {texts.VAT}
           </p>
           <p>
             <a
@@ -31,19 +29,18 @@ export default () => {
               data-item-image={
                 "https://thirsty-mcnulty-4b6910.netlify.com/img/punainentupalogo.svg"
               }
-              data-item-name={"Workshop day"}
-              data-item-description={"On-premise workshop day"}
-              data-item-custom1-name={"Note"}
+              data-item-name={"Workshop / työpaja"}
+              data-item-description={"On-premise workshop"}
+              data-item-custom1-name={"Add a note / Lisää viesti"}
               data-item-custom1-value={""}
               data-item-url={"https://thirsty-mcnulty-4b6910.netlify.com/buy"}
             >
-              Add 1 workshop day to cart
+              {texts.addToCart}
             </a>
           </p>
-          <p />
           <p>
-            After purchase, please send me information what would you like to
-            achieve during the workshop and let's go from there.<br />
+            {texts.afterPurchase}
+            <br />
             <a href="mailto:atte@punainentupa.fi">atte@punainentupa.fi</a>
           </p>
         </div>
