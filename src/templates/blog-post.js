@@ -40,7 +40,7 @@ export const BlogPostTemplate = ({
             window.history.back();
           }}
         >
-          <img src={LeftArrow} className="arrow" />
+          <img src={LeftArrow} className="arrow" alt="Back" />
         </div>
       </div>
     </Layout>

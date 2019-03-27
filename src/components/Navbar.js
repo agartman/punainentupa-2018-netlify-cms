@@ -8,6 +8,7 @@ export default ({ language }) => (
       <img
         className="hero--flag"
         src={`/img/${revertedLanguage(language)}.svg`}
+        alt="Change language"
       />
     </Link>
   </nav>

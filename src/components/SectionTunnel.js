@@ -2,7 +2,6 @@ import React from "react";
 import { MarkDownContent } from "../components/Content";
 import { BlogContent } from "../components/BlogContent";
 import ContactForm from "../components/ContactForm";
-import Link from "gatsby-link";
 export const SectionTunnel = (
   {
     node: {
