@@ -46,7 +46,6 @@ nav {
 
 .angled {
   position: relative;
-  z-index: 1;
   margin: 50px 0;
   @include sectionpadding();
 
@@ -211,16 +210,5 @@ nav {
 .fullstack {
   img, picture {
     width: 50vmin;
-  }
-}
-.contact {
-  form {
-    div {
-      padding-bottom: 30px;
-      div {
-        display: flex;
-        flex-direction: column;
-      }
-    }
   }
 }
