@@ -1,7 +1,7 @@
-@import "mixins";
-@import "variables";
-@import "button";
-@import "typography";
+@import "_mixins";
+@import "_variables";
+@import "_button";
+@import "_typography";
 
 body {
   background-color: $white;
