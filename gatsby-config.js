@@ -1,10 +1,13 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://punainentupa.fi",
     title:
       "Atte Gartman - Freelancer full stack developer - Punainen tupa solutions Oy"
   },
   plugins: [
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-robots-txt",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
@@ -32,21 +35,21 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/img/favicon.png",
-  
+
         // WebApp Manifest Configuration
-        appName: 'Punainen Tupa Solutions Oy website', // Inferred with your package.json
+        appName: "Punainen Tupa Solutions Oy website", // Inferred with your package.json
         appDescription: null,
-        developerName: 'Atte Gartman',
+        developerName: "Atte Gartman",
         developerURL: null,
-        dir: 'auto',
-        lang: 'fi',
-        background: '#fff',
-        theme_color: '#ce2d2d',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/',
-        version: '1.0',
-  
+        dir: "auto",
+        lang: "fi",
+        background: "#fff",
+        theme_color: "#ce2d2d",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/",
+        version: "1.0",
+
         icons: {
           android: true,
           appleIcon: true,
