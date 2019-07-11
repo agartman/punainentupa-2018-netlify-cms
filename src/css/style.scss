@@ -151,7 +151,7 @@ nav {
         max-height: 10vh;
       }
       &:hover {
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         opacity: 0.6;
       }
     }
@@ -162,7 +162,6 @@ nav {
   &-post {
     img {
       max-height: 20vh;
-      width: 100%;
       margin: auto;
     }
     ul {
@@ -208,7 +207,8 @@ nav {
   }
 }
 .fullstack {
-  img, picture {
+  img,
+  picture {
     width: 50vmin;
   }
 }

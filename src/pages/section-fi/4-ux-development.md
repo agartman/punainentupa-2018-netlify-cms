@@ -11,5 +11,5 @@ language: fi
 
 * 15 vuoden kokemus web-kehityksestä
 * Responsiivinen ja nopea käyttökokemus
-* ES6, TypeScript, SCSS
+* JAMStack, ES6, TypeScript, SCSS
 * React, Vue, Redux
