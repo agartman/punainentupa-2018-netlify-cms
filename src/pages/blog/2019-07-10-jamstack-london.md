@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Jamming at the JAMStack London conference 2019
 date: 2019-07-10T15:04:10.000Z
-description: I visited the JAMStack conference in London on 9-10th of July. Here's how it went down.
+description: I visited the JAMStack conference in London on 9-10th of July. Here's how it went down and what JAMStack is about.
 active: true
 language: en
 ---
