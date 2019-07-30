@@ -31,9 +31,13 @@ export const SectionTunnel = (
     case "contact":
       return <ContactForm {...commonProps} />;
     case "blog":
-      const blogPosts = edges.filter(
-        edge => edge.node.frontmatter.templateKey === "blog-post"
-      );
+      const blogPosts = edges
+        .filter(edge => edge.node.frontmatter.templateKey === "blog-post")
+        .sort(
+          (aEdge, bEdge) =>
+            new Date(bEdge.node.frontmatter.date) >
+            new Date(aEdge.node.frontmatter.date)
+        );
       return <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />;
     default:
       return <MarkDownContent {...commonProps} markdown={rawMarkdownBody} />;
