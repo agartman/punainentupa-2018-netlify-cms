@@ -4,6 +4,6 @@ module.exports = {
     command:
       "./node_modules/.bin/gatsby build && ./node_modules/.bin/gatsby serve",
     port: 9000,
-    launchTimeout: 10000
+    launchTimeout: 20000
   }
 };
