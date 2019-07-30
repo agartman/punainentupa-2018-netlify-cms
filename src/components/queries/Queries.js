@@ -1,10 +1,10 @@
-import { graphql } from "gatsby";
-import React from "react";
-import { StaticQuery } from "gatsby";
-import SectionPage from "../SectionPage";
+import { graphql } from 'gatsby'
+import React from 'react'
+import { StaticQuery } from 'gatsby'
+import SectionPage from '../SectionPage'
 export default class SectionPageFactory extends React.Component {
   render() {
-    const { language } = this.props;
+    const { language } = this.props
 
     return (
       <StaticQuery
@@ -38,6 +38,6 @@ export default class SectionPageFactory extends React.Component {
         `}
         render={data => <SectionPage data={data} language={language} />}
       />
-    );
+    )
   }
 }

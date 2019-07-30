@@ -1,108 +1,110 @@
-import React from "react";
-import "../css/contact.scss";
-import Button from "../components/Button";
+import React from 'react'
+import '../css/contact.scss'
+import Button from '../components/Button'
 
 const finnishButtonTexts = {
   sendButton: 'Lähetä',
-  sending: "Lähetetään...",
-  thanks: "Kiitti. Vastaan pian viestiisi.",
-  placeholderName: "Nimi",
-  placeholderEmail: "Sähköpostiosoite",
-  placeholderMessage: "Viesti",
-  errorOccured: "Hups, jotain hassua tapahtui.",
-  done: "Viesti lähti liikkeelle.",
+  sending: 'Lähetetään...',
+  thanks: 'Kiitti. Vastaan pian viestiisi.',
+  placeholderName: 'Nimi',
+  placeholderEmail: 'Sähköpostiosoite',
+  placeholderMessage: 'Viesti',
+  errorOccured: 'Hups, jotain hassua tapahtui.',
+  done: 'Viesti lähti liikkeelle.',
 }
 const englishButtonTexts = {
   sendButton: 'Send',
-  sending: "Sending...",
+  sending: 'Sending...',
   thanks: "Thanks. I'll get back to you ASAP.",
-  placeholderName: "Name",
-  placeholderEmail: "E-mail",
-  placeholderMessage: "Message",
-  errorOccured: "Error occured, oops.",
-  done: "Done.",
+  placeholderName: 'Name',
+  placeholderEmail: 'E-mail',
+  placeholderMessage: 'Message',
+  errorOccured: 'Error occured, oops.',
+  done: 'Done.',
 }
 
 export default class ContactForm extends React.Component {
   encode = data => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
 
   texts() {
-    return this.props.language === 'fi' ? finnishButtonTexts : englishButtonTexts
+    return this.props.language === 'fi'
+      ? finnishButtonTexts
+      : englishButtonTexts
   }
 
   constructor(params) {
-    super(params);
+    super(params)
     this.state = {
       loading: false,
       loaded: false,
-      email: "",
-      buttonText: this.texts().sendButton
-    };
-    this.handleChangeName = this.handleChangeName.bind(this);
-    this.handleChangeEmail = this.handleChangeEmail.bind(this);
-    this.handleChangeMessage = this.handleChangeMessage.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+      email: '',
+      buttonText: this.texts().sendButton,
+    }
+    this.handleChangeName = this.handleChangeName.bind(this)
+    this.handleChangeEmail = this.handleChangeEmail.bind(this)
+    this.handleChangeMessage = this.handleChangeMessage.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit = e => {
     this.setState({
       loading: true,
       buttonText: this.texts().sending,
-      contactEmail: "",
-      contactMessage: "",
-      contactName: ""
-    });
-    e.preventDefault();
+      contactEmail: '',
+      contactMessage: '',
+      contactName: '',
+    })
+    e.preventDefault()
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: this.encode({
-        "form-name": "contact",
+        'form-name': 'contact',
         email: this.state.contactEmail,
         name: this.state.contactName,
-        message: this.state.contactMessage
-      })
+        message: this.state.contactMessage,
+      }),
     })
       .then(() => {
         this.setState({
           loading: false,
           loaded: true,
           title: this.texts().thanks,
-          buttonText: this.texts().done
-        });
+          buttonText: this.texts().done,
+        })
       })
       .catch(error => {
-        console.log(error);
+        console.log(error)
         this.setState({
           loading: false,
           loaded: true,
-          buttonText: this.texts().errorOccured
-        });
-      });
-  };
+          buttonText: this.texts().errorOccured,
+        })
+      })
+  }
 
   handleChangeMessage(event) {
-    this.setState({ loaded: false, contactMessage: event.target.value });
+    this.setState({ loaded: false, contactMessage: event.target.value })
   }
 
   handleChangeName(event) {
-    this.setState({ loaded: false, contactName: event.target.value });
+    this.setState({ loaded: false, contactName: event.target.value })
   }
 
   handleChangeEmail(event) {
-    this.setState({ loaded: false, contactEmail: event.target.value });
+    this.setState({ loaded: false, contactEmail: event.target.value })
   }
 
   render() {
-    const texts = this.texts();
+    const texts = this.texts()
     return (
       <div className={this.props.className}>
-        <div dangerouslySetInnerHTML={{__html: this.props.html}}></div>
+        <div dangerouslySetInnerHTML={{ __html: this.props.html }} />
         <form onSubmit={this.handleSubmit}>
           <div>
             <div>
@@ -138,12 +140,12 @@ export default class ContactForm extends React.Component {
               />
             </div>
             <div>
-              <Button title={texts.sendButton} type="submit"></Button>
+              <Button title={texts.sendButton} type="submit" />
             </div>
             {this.state.loaded && <h2>{texts.thanks}</h2>}
           </div>
         </form>
       </div>
-    );
+    )
   }
 }

@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
-import { HTMLContent } from "../components/Content";
-import PropTypes from "prop-types";
+import React from 'react'
+import Link from 'gatsby-link'
+import { HTMLContent } from '../components/Content'
+import PropTypes from 'prop-types'
 
 export const BlogContent = ({ className, blogPosts, html }) => (
   <div className={className}>
@@ -12,8 +12,8 @@ export const BlogContent = ({ className, blogPosts, html }) => (
           node: {
             id,
             fields: { slug },
-            frontmatter: { title, active, date }
-          }
+            frontmatter: { title, active, date },
+          },
         }) => {
           return (
             active === true && (
@@ -22,17 +22,17 @@ export const BlogContent = ({ className, blogPosts, html }) => (
                 <time>{date}</time>
               </li>
             )
-          );
+          )
         }
       )}
     </ul>
   </div>
-);
+)
 
-export default BlogContent;
+export default BlogContent
 
 BlogContent.propTypes = {
   className: PropTypes.string,
   blogPosts: PropTypes.array,
-  html: PropTypes.string
-};
+  html: PropTypes.string,
+}

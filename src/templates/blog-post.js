@@ -1,26 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import Content, { HTMLContent } from "../components/Content";
-import Layout from "../layouts/index";
-import { graphql } from "gatsby";
-import LeftArrow from "../img/left.png";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import Content, { HTMLContent } from '../components/Content'
+import Layout from '../layouts/index'
+import { graphql } from 'gatsby'
+import LeftArrow from '../img/left.png'
 export const BlogPostTemplate = ({
   content,
   title,
   date,
   description,
-  slug
+  slug,
 }) => {
   const titleContent = (
     <React.Fragment>
       {title}
       <time>{date}</time>
     </React.Fragment>
-  );
+  )
   return (
     <Layout
-      className={"blog"}
+      className={'blog'}
       article={true}
       title={title}
       description={description}
@@ -37,26 +37,26 @@ export const BlogPostTemplate = ({
       <div className="blog-footer">
         <div
           onClick={() => {
-            window.history.back();
+            window.history.back()
           }}
         >
           <img src={LeftArrow} className="arrow" alt="Back" />
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet)
-};
+  helmet: PropTypes.instanceOf(Helmet),
+}
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <BlogPostTemplate
@@ -67,16 +67,16 @@ const BlogPost = ({ data }) => {
       date={post.frontmatter.date}
       slug={post.fields.slug}
     />
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+    markdownRemark: PropTypes.object,
+  }),
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -94,4 +94,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
