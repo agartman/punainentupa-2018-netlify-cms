@@ -161,18 +161,36 @@ nav {
   }
   &-post {
     img {
-      max-height: 20vh;
+      max-height: 50vh;
       margin: auto;
+      display: block;
+      max-width: 90vw;
+      @media (min-width: $screen-sm-max) {
+        max-width: 80vw;
+      }
     }
-    ul {
+
+    img + em {
+      font-size: 0.8em;
+      margin: auto;
+      display: block;
+    }
+
+    ul,
+    ol {
       font-family: "Rubik", sans-serif;
-      list-style-type: disc;
+      line-height: 1.6em;
       li {
         display: list-item;
         text-transform: none;
         margin-left: 20px;
       }
     }
+
+    ul {
+      list-style: disc;
+    }
+
     padding: 0% 5vmin;
     > div {
       margin-left: auto;
