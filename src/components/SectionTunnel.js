@@ -1,7 +1,6 @@
-import React from 'react'
-import { MarkDownContent } from '../components/Content'
-import { BlogContent } from '../components/BlogContent'
-import ContactForm from '../components/ContactForm'
+import React from "react";
+import { MarkDownContent } from "../components/Content";
+import { BlogContent } from "../components/BlogContent";
 export const SectionTunnel = (
   {
     node: {
@@ -22,24 +21,22 @@ export const SectionTunnel = (
   const commonProps = {
     key: title,
     className: `section ${sectionType} angled bg-${theme} text${alignment} ${
-      className ? className : ''
+      className ? className : ""
     }`,
     html,
     language,
-  }
+  };
   switch (sectionType) {
-    case 'contact':
-      return <ContactForm {...commonProps} />
-    case 'blog':
+    case "blog":
       const blogPosts = edges
-        .filter(edge => edge.node.frontmatter.templateKey === 'blog-post')
+        .filter((edge) => edge.node.frontmatter.templateKey === "blog-post")
         .sort(
           (aEdge, bEdge) =>
             new Date(bEdge.node.frontmatter.date) >
             new Date(aEdge.node.frontmatter.date)
-        )
-      return <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />
+        );
+      return <BlogContent {...commonProps} blogPosts={blogPosts} html={html} />;
     default:
-      return <MarkDownContent {...commonProps} markdown={rawMarkdownBody} />
+      return <MarkDownContent {...commonProps} markdown={rawMarkdownBody} />;
   }
-}
+};

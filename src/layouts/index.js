@@ -1,10 +1,10 @@
-import React from 'react'
-import 'typeface-rubik'
-import 'typeface-josefin-sans'
-import '../css/style.scss'
-import Navbar from '../components/Navbar'
-import SEO from '../components/SEO'
-export default ({
+import React from "react";
+import "typeface-rubik";
+import "typeface-josefin-sans";
+import "../css/style.scss";
+import Navbar from "../components/Navbar";
+import Seo from "../components/SEO";
+const Layout = ({
   children,
   language,
   className,
@@ -16,7 +16,7 @@ export default ({
   shop,
 }) => (
   <div>
-    <SEO
+    <Seo
       article={article}
       title={title}
       description={description}
@@ -26,4 +26,6 @@ export default ({
     {shownav && <Navbar language={language} />}
     <div className={className}>{children}</div>
   </div>
-)
+);
+
+export default Layout;

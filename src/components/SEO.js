@@ -1,27 +1,27 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react";
+import { Helmet } from "react-helmet";
 
-export default ({ article, title, description, slug, shop = false }) => {
+const SEO = ({ article, title, description, slug, shop = false }) => {
   const seo = {
-    title: title || 'Atte Gartman',
+    title: title || "Atte Gartman",
     description:
-      description || 'Full stack web -kehittäjä ja järjestelmäarkkitehti',
-    image: 'https://punainentupa.fi/img/ogimage.png',
-    url: `https://punainentupa.fi${slug ? slug : ''}`,
-  }
+      description || "Full stack web -kehittäjä ja järjestelmäarkkitehti",
+    image: "https://punainentupa.fi/img/ogimage.png",
+    url: `https://punainentupa.fi${slug ? slug : ""}`,
+  };
   return (
     <>
       <Helmet
         title={seo.title}
-        titleTemplate={'%s - Punainen Tupa Solutions Oy'}
+        titleTemplate={"%s - Punainen Tupa Solutions Oy"}
         link={
           shop
             ? [
                 {
                   href:
-                    'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css',
-                  rel: 'stylesheet',
-                  type: 'text/css',
+                    "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
+                  rel: "stylesheet",
+                  type: "text/css",
                 },
               ]
             : undefined
@@ -30,24 +30,24 @@ export default ({ article, title, description, slug, shop = false }) => {
           shop
             ? [
                 {
-                  type: 'text/javascript',
+                  type: "text/javascript",
                   src:
-                    'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
+                    "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js",
                 },
                 {
-                  type: 'text/javascript',
-                  url: '',
-                  id: 'snipcart',
-                  'data-api-key':
-                    'OTk5YTUzOTItZWIwNC00NWM5LWEyYWUtMDBlYWU5MTMxNjRhNjM2ODM2NjcyNzkyODMzNjUw',
-                  src: 'https://cdn.snipcart.com/scripts/2.0/snipcart.js',
+                  type: "text/javascript",
+                  url: "",
+                  id: "snipcart",
+                  "data-api-key":
+                    "OTk5YTUzOTItZWIwNC00NWM5LWEyYWUtMDBlYWU5MTMxNjRhNjM2ODM2NjcyNzkyODMzNjUw",
+                  src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js",
                 },
               ]
             : undefined
         }
       >
-        <meta name="og:locale" content={'fi-FI'} />
-        <meta name="og:locale:alternate" content={'en-GB'} />
+        <meta name="og:locale" content={"fi-FI"} />
+        <meta name="og:locale:alternate" content={"en-GB"} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
         {seo.url && <meta property="og:url" content={seo.url} />}
@@ -60,7 +60,7 @@ export default ({ article, title, description, slug, shop = false }) => {
         )}
         {seo.image && <meta property="og:image" content={seo.image} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={'@attegman'} />
+        <meta name="twitter:creator" content={"@attegman"} />
         {seo.title && <meta name="twitter:title" content={seo.title} />}
         {seo.description && (
           <meta name="twitter:description" content={seo.description} />
@@ -68,5 +68,7 @@ export default ({ article, title, description, slug, shop = false }) => {
         {seo.image && <meta name="twitter:image" content={seo.image} />}
       </Helmet>
     </>
-  )
-}
+  );
+};
+
+export default SEO;

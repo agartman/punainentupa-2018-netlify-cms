@@ -7,8 +7,9 @@ theme: white
 alignment: left
 language: fi
 ---
-# API-rajapinnat ja pilvipalvelut
 
-* NodeJS, ASP.NET Web API, Apollo
-* GraphQL, REST, OAuth
-* Azure PaaS
+# Tekkidekki
+
+- React, JS, TypeScript, Gatsby
+- GraphQL, NodeJS, Azure, AWS, Shopify
+- Cypress, Jest, React testing library

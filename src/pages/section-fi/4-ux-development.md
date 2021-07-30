@@ -7,9 +7,10 @@ theme: red
 alignment: right
 language: fi
 ---
-# Modernia UX-kehitystä
 
-* 15 vuoden kokemus web-kehityksestä
-* Responsiivinen ja nopea käyttökokemus
-* JAMStack, ES6, TypeScript, SCSS
-* React, Vue, Redux
+# Digitaalisten palvelujen tekijä
+
+- 15 vuotta devausta ja jatkuvaa oppimista
+- Monipuolinen kehittäjä: selain, ecommerce, pilvi
+- Bisnes-arvon tuotto keskiössä
+- Luova ongelman ratkaisija

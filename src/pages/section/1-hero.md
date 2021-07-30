@@ -7,8 +7,9 @@ theme: white
 alignment: left
 language: en
 ---
+
 ![A logo that looks like the silhoutette of a red house roof](/img/punainentupalogo.svg)
 
 # Hi, I'm Atte
 
-# Freelancer full stack web -developer
+# Freelancer full stack web developer

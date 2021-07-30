@@ -6,10 +6,11 @@ sectionType: highlight
 theme: red
 alignment: right
 language: en
-
 ---
-# UX development
 
-* 15 years hands-on web dev
-* ES6, TypeScript, SCSS
-* React, Vue, Redux
+# Digital service development
+
+- 15 years as pro dev (still learning)
+- Versatile developer: browser, ecommerce, cloud
+- Business value minded
+- Creative problem solver

@@ -7,8 +7,9 @@ theme: white
 alignment: left
 language: en
 ---
-# API and microservices development
 
-* NodeJS, ASP.NET Web API, Apollo
-* GraphQL, REST, OAuth
-* Azure PaaS
+# Tech deck
+
+- React, JS, TypeScript, Gatsby
+- GraphQL, NodeJS, Azure, AWS, Shopify
+- Cypress, Jest, React testing library
