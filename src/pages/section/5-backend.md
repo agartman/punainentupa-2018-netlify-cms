@@ -10,6 +10,6 @@ language: en
 
 # Tech deck
 
-- React, JS, TypeScript, Gatsby
+- React, JS, TypeScript, Gatsby, Vite
 - GraphQL, NodeJS, Azure, AWS, Shopify
 - Cypress, Jest, React testing library
